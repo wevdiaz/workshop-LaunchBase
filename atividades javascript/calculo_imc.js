@@ -1,5 +1,5 @@
 //Atividade de Cálculo do imc
-//Criei uma função para essae exercício.
+//Criei uma função para esse exercício.
 
 
 function calcularImc(nome, peso, altura) {
