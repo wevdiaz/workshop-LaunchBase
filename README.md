@@ -1,6 +1,8 @@
 # workshop LaunchBase
  Atividades realizadas durante o curso da rocketseat:rocket: no bootcamp. Com um excelente professor e profissional, que é o **Maik Brito**.:smile: :+1:
 
+ ***
+
  ### Atividades Javascript
 
  Nesta primeira pasta, temos pequenos programas desenvolvidos com *js*. Treinando conceios importantes como:
