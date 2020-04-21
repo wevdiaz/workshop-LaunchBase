@@ -19,6 +19,31 @@
 
  *** 
 
+ ### Desafio Layout
+
+ Agora estou desenvolvendo um protótipo de layout para aulas particulares com desafio.:smile::man_technologist:
+
+ **Tecnologias Utilizadas**:hammer_and_wrench:	
+
+ *Front-end*
+ * HTML
+ * CSS
+ * Javascript
+ *Back-end*
+ * Nodejs
+ * Express
+ * Nunjucks
+
+ **Atualização do projeto**
+
+-[x] Desenvolver o header da página index.:pushpin:
+
+-[x] Animação nos links utilizando transition do CSS3.:pushpin:
+
+-[ ] Container com imagem dinâmica.
+
+-[ ] Atualização página dinâmico pelo servidor.
+
 
 
 
