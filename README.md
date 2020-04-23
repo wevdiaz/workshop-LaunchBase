@@ -29,6 +29,7 @@
  * HTML
  * CSS
  * Javascript
+ 
  *Back-end*
  * Nodejs
  * Express
@@ -36,13 +37,18 @@
 
  **Atualização do projeto**
 
--[x] Desenvolver o header da página index.:pushpin:
+- [x] Desenvolver o header da página index.:pushpin:
 
--[x] Animação nos links utilizando transition do CSS3.:pushpin:
+- [x] Animação nos links utilizando transition do CSS3.:pushpin:
 
--[ ] Container com imagem dinâmica.
+- [ ] Container com imagem dinâmica.
 
--[ ] Atualização página dinâmico pelo servidor.
+- [ ] Atualização página dinâmico pelo servidor.
+
+
+***
+
+Desenvolvido e praticado com :heart:.
 
 
 
