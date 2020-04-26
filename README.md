@@ -41,9 +41,9 @@
 
 - [x] Animação nos links utilizando transition do CSS3.:pushpin:
 
-- [ ] Container com imagem dinâmica.
+- [x] Container com imagem dinâmica.
 
-- [ ] Atualização página dinâmico pelo servidor.
+- [x] Atualização página dinâmico pelo servidor.
 
 
 ***
