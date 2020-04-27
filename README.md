@@ -45,6 +45,10 @@
 
 - [x] Atualização página dinâmico pelo servidor.
 
+- [ ] Criar um formulário para cadastro de professores.
+
+- [ ] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.
+
 
 ***
 
