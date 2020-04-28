@@ -5,6 +5,7 @@ const routes = require("./routes");
 
 const servidor = express();
 
+servidor.use(express.urlencoded({ extended: true }));
 servidor.use(express.static("public"));
 servidor.use(routes);
 

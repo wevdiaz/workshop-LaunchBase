@@ -158,3 +158,41 @@ h3,
     color: var(--color-labelDetails);
     font-weight: bold;
 }
+
+
+/* === Form === */
+
+input {
+    width: 100%;
+    outline: none;
+
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    padding: 8px 32px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 16px;
+    width: 100%;
+    font-size: 16px;
+    
+}
+
+select {
+    padding: 4px 8px;
+    width: 50%;
+}
