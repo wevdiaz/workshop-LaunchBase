@@ -41,11 +41,13 @@
 
 - [x] Animação nos links utilizando transition do CSS3.:pushpin:
 
-- [x] Container com imagem dinâmica.
+- [x] Container com imagem dinâmica.:pushpin:
 
-- [x] Atualização página dinâmico pelo servidor.
+- [x] Atualização página dinâmico pelo servidor.:pushpin:
 
-- [ ] Criar um formulário para cadastro de professores.
+- [x] Criar um formulário para cadastro de professores.:pushpin:
+
+- [x] Estilização do Formulário.:pushpin:
 
 - [ ] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.
 
