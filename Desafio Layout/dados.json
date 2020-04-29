@@ -19,6 +19,16 @@
       "modalidade": "distancia",
       "materias": "quimica",
       "created_at": 1588122963799
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://avatar",
+      "nome": "Carlos",
+      "nascimento": 1490054400000,
+      "formacao": "mestrado",
+      "modalidade": "distancia",
+      "materias": "inglês",
+      "created_at": 1588174440428
     }
   ]
 }
