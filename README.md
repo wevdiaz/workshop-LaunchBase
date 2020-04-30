@@ -49,7 +49,7 @@
 
 - [x] Estilização do Formulário.:pushpin:
 
-- [ ] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.
+- [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.
 
 
 ***
