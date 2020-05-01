@@ -21,7 +21,7 @@
 
  ### Desafio Layout
 
- Agora estou desenvolvendo um protótipo de layout para aulas particulares com desafio.:smile::man_technologist:
+ Agora estou desenvolvendo um protótipo de layout para aulas particulares neste [desafio](https://github.com/wevdiaz/workshop-LaunchBase/tree/master/Desafio%20Layout).:smile::man_technologist:
 
  **Tecnologias Utilizadas**:hammer_and_wrench:	
 
@@ -49,7 +49,13 @@
 
 - [x] Estilização do Formulário.:pushpin:
 
-- [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.
+- [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.:pushpin:
+
+- [ ] Criar uma página com os dados do professor cadastrado, puxando pelo o ID.
+
+- [ ] Criar um link para página de edição.
+
+- [ ] Criar uma rota para edição de dados e verificação.
 
 
 ***
