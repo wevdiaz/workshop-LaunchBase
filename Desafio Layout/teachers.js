@@ -42,3 +42,46 @@ exports.post = function(req, res) {
 
      //return res.send(req.body);
 }
+
+
+// show
+
+exports.show = function(req, res) {
+    
+    const { id } = req.params;
+
+    const foundTeacher = dado.teachers.find(function(teacher){
+        return teacher.id == id;
+    });
+
+    if (!foundTeacher) {
+        return res.send("Teacher not found!");
+    }
+
+
+    const teacher = {
+        ...foundTeacher,
+        idade:"",
+        formacao:"",
+        modalidade: escolherModalidade(foundTeacher.modalidade),
+        materias: foundTeacher.materias.split(","),
+        created_at:""
+    }
+
+    return res.render("teachers/show", { teacher });
+}
+
+
+
+
+
+// ajuste form => Modalidade
+function escolherModalidade(opcao){
+    
+    if(opcao == "presencial"){
+        return "Presencial"
+    }
+    else {
+        return "A distânca"
+    }
+}
