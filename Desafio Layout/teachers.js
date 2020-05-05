@@ -58,10 +58,27 @@ exports.show = function(req, res) {
         return res.send("Teacher not found!");
     }
 
+    function encontrarIdade(timestamp) {
+
+        const today = new Date();
+    
+        const birthDate = new Date(timestamp);
+        
+        let age = today.getFullYear() - birthDate.getFullYear();
+       
+        const month = today.getMonth() - birthDate.getMonth();
+    
+        if(month < 0 || month == 0 && today.getDate() < birthDate.getDate()) {
+            age = age - 1;
+        }
+    
+        return age;    
+    }
+
 
     const teacher = {
         ...foundTeacher,
-        idade:"",
+        idade: encontrarIdade(foundTeacher.nascimento),
         formacao:escolhaDaFormacao(foundTeacher.formacao),
         modalidade: escolherModalidade(foundTeacher.modalidade),
         materias: foundTeacher.materias.split(","),
@@ -98,17 +115,17 @@ function escolhaDaFormacao(escolha){
 
 
         case "superior":
-            escolha = "Ensino Superior Completo";
-            break;
+           return escolha = "Ensino Superior Completo";
+            
 
 
         case "mestrado":
-            escolha = "Mestrado";
-            break;
+           return escolha = "Mestrado";
+            
 
 
         case "doutorado":
-            escolha = "Doutorado";
-            break;
+           return escolha = "Doutorado";
+            
     }
 }

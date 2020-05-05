@@ -3,36 +3,6 @@
     {
       "id": 1,
       "avatar_url": "http://avatar",
-      "nome": "Pedro",
-      "nascimento": 1555804800000,
-      "formacao": "medio",
-      "modalidade": "distancia",
-      "materias": "geografia",
-      "created_at": 1588122490460
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://avatar",
-      "nome": "Valerie",
-      "nascimento": 1565913600000,
-      "formacao": "superior",
-      "modalidade": "distancia",
-      "materias": "quimica",
-      "created_at": 1588122963799
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://avatar",
-      "nome": "Carlos",
-      "nascimento": 1490054400000,
-      "formacao": "mestrado",
-      "modalidade": "distancia",
-      "materias": "inglês",
-      "created_at": 1588174440428
-    },
-    {
-      "id": 4,
-      "avatar_url": "http://avatar",
       "nome": "Hugo",
       "nascimento": 493430400000,
       "formacao": "superior",
@@ -41,7 +11,7 @@
       "created_at": 1588437644309
     },
     {
-      "id": 5,
+      "id": 2,
       "avatar_url": "http://avatar",
       "nome": "Cleide",
       "nascimento": 393206400000,
@@ -49,6 +19,26 @@
       "modalidade": "presencial",
       "materias": "inglês, português, espanhol",
       "created_at": 1588438680538
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://avatar",
+      "nome": "Valerie",
+      "nascimento": 791164800000,
+      "formacao": "medio",
+      "modalidade": "presencial",
+      "materias": "inglês, espanhol",
+      "created_at": 1588720185764
+    },
+    {
+      "id": 4,
+      "avatar_url": "http://avatar",
+      "nome": "Pedro",
+      "nascimento": -375494400000,
+      "formacao": "doutorado",
+      "modalidade": "presencial",
+      "materias": "matemática, física",
+      "created_at": 1588720328226
     }
   ]
 }
