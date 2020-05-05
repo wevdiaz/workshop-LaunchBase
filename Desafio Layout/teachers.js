@@ -62,7 +62,7 @@ exports.show = function(req, res) {
     const teacher = {
         ...foundTeacher,
         idade:"",
-        formacao:"",
+        formacao:escolhaDaFormacao(foundTeacher.formacao),
         modalidade: escolherModalidade(foundTeacher.modalidade),
         materias: foundTeacher.materias.split(","),
         created_at:""
@@ -83,5 +83,32 @@ function escolherModalidade(opcao){
     }
     else {
         return "A distânca"
+    }
+}
+
+
+// ajuste form => Formação
+function escolhaDaFormacao(escolha){
+
+    switch(escolha) {
+        
+        case "medio":
+           return escolha = "Ensino Médio Completo";
+            
+
+
+        case "superior":
+            escolha = "Ensino Superior Completo";
+            break;
+
+
+        case "mestrado":
+            escolha = "Mestrado";
+            break;
+
+
+        case "doutorado":
+            escolha = "Doutorado";
+            break;
     }
 }
