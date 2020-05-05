@@ -53,6 +53,8 @@
 
 - [ ] Criar uma página com os dados do professor cadastrado, puxando pelo o ID.
 
+- [ ] Ajuste dos dados puxados para a página de exibição.
+
 - [ ] Criar um link para página de edição.
 
 - [ ] Criar uma rota para edição de dados e verificação.
