@@ -1,5 +1,7 @@
 const fs = require("fs");
 const dado = require("./dados.json");
+const { encontrarIdade, encontrarData } = require("./utils");
+const intl = require("intl");
 
 
 // create 
@@ -41,4 +43,91 @@ exports.post = function(req, res) {
     });
 
      //return res.send(req.body);
+}
+
+
+// show
+
+exports.show = function(req, res) {
+    
+    const { id } = req.params;
+
+    const foundTeacher = dado.teachers.find(function(teacher){
+        return teacher.id == id;
+    });
+
+    if (!foundTeacher) {
+        return res.send("Teacher not found!");
+    }
+    
+    const teacher = {
+        ...foundTeacher,
+        idade: encontrarIdade(foundTeacher.nascimento),
+        formacao:escolhaDaFormacao(foundTeacher.formacao),
+        modalidade: escolherModalidade(foundTeacher.modalidade),
+        materias: foundTeacher.materias.split(","),
+        created_at: new intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
+    }
+
+    return res.render("teachers/show", { teacher });
+}
+
+
+// edit
+
+exports.edit =  function(req, res){
+
+    const { id } = req.params;
+
+    const foundTeacher = dado.teachers.find(function(teacher){
+        return teacher.id == id;
+    });
+
+    if (!foundTeacher) {
+        return res.send("Teacher not found!");
+    }
+
+    encontrarData(foundTeacher.nascimento);
+
+    return res.render("teachers/edit", { teacher: foundTeacher });
+}
+
+
+
+// ajuste form => Modalidade
+function escolherModalidade(opcao){
+    
+    if(opcao == "presencial"){
+        return "Presencial"
+    }
+    else {
+        return "A distânca"
+    }
+}
+
+
+// ajuste form => Formação
+function escolhaDaFormacao(escolha){
+
+    switch(escolha) {
+        
+        case "medio":
+           return escolha = "Ensino Médio Completo";
+            
+
+
+        case "superior":
+           return escolha = "Ensino Superior Completo";
+            
+
+
+        case "mestrado":
+           return escolha = "Mestrado";
+            
+
+
+        case "doutorado":
+           return escolha = "Doutorado";
+            
+    }
 }

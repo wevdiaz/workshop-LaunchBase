@@ -196,3 +196,19 @@ select {
     padding: 4px 8px;
     width: 50%;
 }
+
+/* === edit page ===*/
+
+a.edit {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    display: block;
+    background-color: var(--color-primary);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
