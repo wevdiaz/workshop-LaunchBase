@@ -1,6 +1,7 @@
 const fs = require("fs");
 const dado = require("./dados.json");
 const { encontrarIdade } = require("./utils");
+const intl = require("intl");
 
 
 // create 
@@ -65,7 +66,7 @@ exports.show = function(req, res) {
         formacao:escolhaDaFormacao(foundTeacher.formacao),
         modalidade: escolherModalidade(foundTeacher.modalidade),
         materias: foundTeacher.materias.split(","),
-        created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
+        created_at: new intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
     }
 
     return res.render("teachers/show", { teacher });
