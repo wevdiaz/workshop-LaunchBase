@@ -51,13 +51,15 @@
 
 - [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.:pushpin:
 
-- [ ] Criar uma página com os dados do professor cadastrado, puxando pelo o ID.
+- [x] Criar uma página com os dados do professor cadastrado, puxando pelo o ID.
 
-- [ ] Ajuste dos dados puxados para a página de exibição.
+- [x] Ajuste dos dados puxados para a página de exibição.
 
 - [ ] Criar um link para página de edição.
 
 - [ ] Criar uma rota para edição de dados e verificação.
+
+- [ ] Tratamento de dados para exibição de datas.
 
 
 ***
