@@ -15,5 +15,17 @@ module.exports = {
         }
     
         return age;    
+    },
+
+    encontrarData: function(timestamp){
+
+        const data = new Date(timestamp);
+
+        const ano = data.getUTCFullYear();
+        const mes = data.getUTCMonth() + 1;
+        const dia = data.getUTCDate();
+
+        console.log(`${ano}/${mes}/${dia}`);
+        
     }
 }

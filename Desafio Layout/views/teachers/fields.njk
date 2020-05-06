@@ -1,21 +1,32 @@
 <div class="item">
                 <div>Avatar URL</div>
                 <div>
-                    <input type="url" name="avatar_url" placeholder="http://">
+                    <input type="url"
+                           name="avatar_url" 
+                           placeholder="http://"
+                           value= "{{teacher.avatar_url}}"
+                           >
                 </div>
             </div>
 
             <div class="item">
                 <div>Professor(a)</div>
                 <div>
-                    <input type="text" name="nome" placeholder="Nome Completo">
+                    <input type="text"
+                           name="nome"
+                           placeholder="Nome Completo"
+                           value="{{teacher.nome}}"
+                           >
                 </div>
             </div>
 
              <div class="item">
                 <div>Nascimento</div>
                 <div>
-                    <input type="date" name="nascimento">
+                    <input type="date" 
+                           name="nascimento"
+                           value="{{teacher.nascimento}}"
+                           >
                 </div>
             </div>
 
@@ -23,10 +34,30 @@
                 <div>Formação</div>
                 <div>
                     <select name="formacao" placeholder="Selecione">
-                        <option value="medio">Ensino Médio Completo</option>
-                        <option value="superior">Ensino Superior Completo</option>
-                        <option value="mestrado">Mestrado</option>
-                        <option value="doutorado">Doutorado</option>
+
+                        <option 
+                            value="medio"
+                            {% if teacher.formacao == "medio" %}
+                                selected
+                            {% endif %}>Ensino Médio Completo</option>
+
+                        <option 
+                            value="superior"
+                            {% if teacher.formacao == "superior" %}
+                                selected
+                            {% endif %}>Ensino Superior Completo</option>
+                        
+                        <option 
+                            value="mestrado"
+                            {% if teacher.formacao == "mestrado" %}
+                                selected
+                            {% endif %}>Mestrado</option>
+
+                        <option 
+                            value="doutorado"
+                            {% if teacher.formacao == "doutorado" %}
+                                selected
+                            {% endif %}>Doutorado</option>
                     </select>
                 </div>
             </div>
@@ -34,15 +65,34 @@
              <div class="item">
                 <div>Modo de Aula</div>
                 <div>
-                    <span><input type="radio" name="modalidade" value="presencial" checked>Presencial</span>
-                    <span><input type="radio" name="modalidade" value="distancia">À distância</span>
+                    <span>
+                        <input type="radio" 
+                               name="modalidade"
+                               value="presencial"
+                               {% if teacher.modalidade == "presencial" %}
+                                    checked
+                               {% endif %}>Presencial
+                    </span>
+
+                    <span>
+                        <input type="radio"
+                               name="modalidade"
+                               value="distancia"
+                               {% if teacher.modalidade == "distancia" %}
+                                    checked
+                               {% endif %}>À distância
+                    </span>
                 </div>
             </div>
 
             <div class="item">
                 <div>Área de atuação</div>
                 <div>
-                    <input type="text" name="materias" placeholder="Separe por vírgula as materias de atuação">
+                    <input type="text"
+                           name="materias" 
+                           placeholder="Separe por vírgula as materias de atuação"
+                           value="{{teacher.materias}}"
+                           >
                 </div>
             </div> 
 

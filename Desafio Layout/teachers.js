@@ -1,6 +1,6 @@
 const fs = require("fs");
 const dado = require("./dados.json");
-const { encontrarIdade } = require("./utils");
+const { encontrarIdade, encontrarData } = require("./utils");
 const intl = require("intl");
 
 
@@ -73,6 +73,24 @@ exports.show = function(req, res) {
 }
 
 
+// edit
+
+exports.edit =  function(req, res){
+
+    const { id } = req.params;
+
+    const foundTeacher = dado.teachers.find(function(teacher){
+        return teacher.id == id;
+    });
+
+    if (!foundTeacher) {
+        return res.send("Teacher not found!");
+    }
+
+    encontrarData(foundTeacher.nascimento);
+
+    return res.render("teachers/edit", { teacher: foundTeacher });
+}
 
 
 
