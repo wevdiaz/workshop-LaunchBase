@@ -87,9 +87,14 @@ exports.edit =  function(req, res){
         return res.send("Teacher not found!");
     }
 
-    encontrarData(foundTeacher.nascimento);
+    const teacher = {
+        ...foundTeacher,
+        nascimento: encontrarData(foundTeacher.nascimento)
+    }
 
-    return res.render("teachers/edit", { teacher: foundTeacher });
+    
+
+    return res.render("teachers/edit", { teacher });
 }
 
 

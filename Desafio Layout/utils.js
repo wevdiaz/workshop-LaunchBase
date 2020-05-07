@@ -22,10 +22,11 @@ module.exports = {
         const data = new Date(timestamp);
 
         const ano = data.getUTCFullYear();
-        const mes = data.getUTCMonth() + 1;
-        const dia = data.getUTCDate();
+        const mes = `0${data.getUTCMonth() + 1}`.slice(-2);
+        const dia = `0${data.getUTCDate()}`.slice(-2);
 
-        console.log(`${ano}/${mes}/${dia}`);
+
+        return `${ano}-${mes}-${dia}`;
         
     }
 }
