@@ -55,11 +55,11 @@
 
 - [x] Ajuste dos dados puxados para a página de exibição.
 
-- [ ] Criar um link para página de edição.
+- [x] Criar um link para página de edição.
 
-- [ ] Criar uma rota para edição de dados e verificação.
+- [x] Criar uma rota para edição de dados e verificação.
 
-- [ ] Tratamento de dados para exibição de datas.
+- [x] Tratamento de dados para exibição de datas.
 
 
 ***
