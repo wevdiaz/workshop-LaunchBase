@@ -1,13 +1,13 @@
 {
   "teachers": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "http://avatar",
-      "nome": "Hugo",
-      "nascimento": 493430400000,
+      "nome": "Hugo Lopez",
+      "nascimento": 556502400000,
       "formacao": "superior",
       "modalidade": "distancia",
-      "materias": "geografia, física, filosofia",
+      "materias": "geografia, filosofia",
       "created_at": 1588437644309
     },
     {
@@ -21,12 +21,12 @@
       "created_at": 1588438680538
     },
     {
-      "id": 3,
+      "id": "3",
       "avatar_url": "http://avatar",
-      "nome": "Valerie",
+      "nome": "Valerie Yokito",
       "nascimento": 791164800000,
       "formacao": "medio",
-      "modalidade": "presencial",
+      "modalidade": "distancia",
       "materias": "inglês, espanhol",
       "created_at": 1588720185764
     },
@@ -41,9 +41,9 @@
       "created_at": 1588720328226
     },
     {
-      "id": 5,
+      "id": "5",
       "avatar_url": "http://avatar",
-      "nome": "Janusa",
+      "nome": "Vanuzita",
       "nascimento": 53827200000,
       "formacao": "mestrado",
       "modalidade": "distancia",

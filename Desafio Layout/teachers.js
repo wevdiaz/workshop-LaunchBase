@@ -102,9 +102,13 @@ exports.edit =  function(req, res){
 exports.put = function(req, res){
 
     const { id } = req.body;
+    let index = 0;
 
-    const foundTeacher = dado.teachers.find(function(teacher){
-        return id == teacher.id
+    const foundTeacher = dado.teachers.find(function(teacher, foundIndex){
+        if (id == teacher.id) {
+            index = foundIndex
+            return true;
+        }
     });
 
     if (!foundTeacher) return res.send("Teacher not found!");
@@ -112,11 +116,16 @@ exports.put = function(req, res){
     const teacher = {
         ...foundTeacher,
         ... req.body,
-        nascimento: Date.parse(req.body.nascimento),
-        id: Number(dado.teachers.length + 1) // Teste aqui
+        nascimento: Date.parse(req.body.nascimento)        
     }
 
-    dado.teachers[] 
+    dado.teachers[index] = teacher;
+
+    fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
+        if (err)  return res.send("write error!");
+
+        return res.redirect(`/teachers/${id}`);
+    });
 }
 
 
