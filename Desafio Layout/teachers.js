@@ -98,6 +98,28 @@ exports.edit =  function(req, res){
 }
 
 
+// put
+exports.put = function(req, res){
+
+    const { id } = req.body;
+
+    const foundTeacher = dado.teachers.find(function(teacher){
+        return id == teacher.id
+    });
+
+    if (!foundTeacher) return res.send("Teacher not found!");
+
+    const teacher = {
+        ...foundTeacher,
+        ... req.body,
+        nascimento: Date.parse(req.body.nascimento),
+        id: Number(dado.teachers.length + 1) // Teste aqui
+    }
+
+    dado.teachers[] 
+}
+
+
 
 // ajuste form => Modalidade
 function escolherModalidade(opcao){
