@@ -51,15 +51,19 @@
 
 - [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.:pushpin:
 
-- [x] Criar uma página com os dados do professor cadastrado, puxando pelo o ID.
+- [x] Criar uma página com os dados do professor cadastrado, puxando pelo o ID. :pushpin:
 
-- [x] Ajuste dos dados puxados para a página de exibição.
+- [x] Ajuste dos dados puxados para a página de exibição. :pushpin:
 
-- [x] Criar um link para página de edição.
+- [x] Criar um link para página de edição. :pushpin:
 
-- [x] Criar uma rota para edição de dados e verificação.
+- [x] Criar uma rota para edição de dados e verificação. :pushpin:
 
-- [x] Tratamento de dados para exibição de datas.
+- [x] Tratamento de dados para exibição de datas. :pushpin:
+
+- [ ] Criar um método PUT.
+
+- [ ] Criar um método DELETE.
 
 
 ***
