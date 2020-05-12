@@ -98,6 +98,57 @@ exports.edit =  function(req, res){
 }
 
 
+// put
+exports.put = function(req, res){
+
+    const { id } = req.body;
+    let index = 0;
+
+    const foundTeacher = dado.teachers.find(function(teacher, foundIndex){
+        if (id == teacher.id) {
+            index = foundIndex
+            return true;
+        }
+    });
+
+    if (!foundTeacher) return res.send("Teacher not found!");
+
+    const teacher = {
+        ...foundTeacher,
+        ... req.body,
+        nascimento: Date.parse(req.body.nascimento),
+        id: Number(req.body.id)        
+    }
+
+    dado.teachers[index] = teacher;
+
+    fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
+        if (err)  return res.send("write error!");
+
+        return res.redirect(`/teachers/${id}`);
+    });
+}
+
+// delete
+exports.delete = function(req, res) {
+    const { id } = req.body;
+
+    const filteredTeachers = dado.teachers.filter(function(teacher){
+        return teacher.id != id
+    });
+
+    dado.teachers = filteredTeachers;
+
+    fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
+        if(err) return res.send("Write file error!");
+
+        return res.redirect("/teachers");
+
+    });
+
+}
+
+
 
 // ajuste form => Modalidade
 function escolherModalidade(opcao){
