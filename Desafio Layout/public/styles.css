@@ -197,7 +197,7 @@ select {
     width: 50%;
 }
 
-/* === edit page ===*/
+/* === edit page btn ===*/
 
 a.edit {
     text-decoration: none;
@@ -211,4 +211,9 @@ a.edit {
     border-radius: 8px;
     text-align: center;
     letter-spacing: 0.1em;
+}
+
+/* === deletar btn === */
+#form-deletar button {
+    background-color: rgba(255, 0, 0, 0.7);
 }
