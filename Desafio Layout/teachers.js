@@ -128,6 +128,25 @@ exports.put = function(req, res){
     });
 }
 
+// delete
+exports.delete = function(req, res) {
+    const { id } = req.body;
+
+    const filteredTeachers = dado.teachers.filter(function(teacher){
+        return teacher.id != id
+    });
+
+    dado.teachers = filteredTeachers;
+
+    fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
+        if(err) return res.send("Write file error!");
+
+        return res.redirect("/teachers");
+
+    });
+
+}
+
 
 
 // ajuste form => Modalidade

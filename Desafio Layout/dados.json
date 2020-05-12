@@ -21,16 +21,6 @@
       "created_at": 1588438680538
     },
     {
-      "id": "3",
-      "avatar_url": "http://avatar",
-      "nome": "Valerie Yokito",
-      "nascimento": 791164800000,
-      "formacao": "medio",
-      "modalidade": "distancia",
-      "materias": "inglês, espanhol",
-      "created_at": 1588720185764
-    },
-    {
       "id": 4,
       "avatar_url": "http://avatar",
       "nome": "Pedro",
@@ -39,16 +29,6 @@
       "modalidade": "presencial",
       "materias": "matemática, física",
       "created_at": 1588720328226
-    },
-    {
-      "id": "5",
-      "avatar_url": "http://avatar",
-      "nome": "Vanuzita",
-      "nascimento": 53827200000,
-      "formacao": "mestrado",
-      "modalidade": "distancia",
-      "materias": "português,literatura,ciência",
-      "created_at": 1588809950891
     }
   ]
 }
