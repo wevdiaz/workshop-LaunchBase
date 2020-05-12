@@ -61,9 +61,9 @@
 
 - [x] Tratamento de dados para exibição de datas. :pushpin:
 
-- [ ] Criar um método PUT.
+- [x] Criar um método PUT. :pushpin:
 
-- [ ] Criar um método DELETE.
+- [x] Criar um método DELETE. :pushpin:
 
 
 ***
