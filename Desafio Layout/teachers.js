@@ -116,7 +116,8 @@ exports.put = function(req, res){
     const teacher = {
         ...foundTeacher,
         ... req.body,
-        nascimento: Date.parse(req.body.nascimento)        
+        nascimento: Date.parse(req.body.nascimento),
+        id: Number(req.body.id)        
     }
 
     dado.teachers[index] = teacher;

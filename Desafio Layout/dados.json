@@ -1,34 +1,34 @@
 {
   "teachers": [
     {
-      "id": "1",
+      "id": 1,
       "avatar_url": "http://avatar",
       "nome": "Hugo Lopez",
-      "nascimento": 556502400000,
+      "nascimento": 556416000000,
       "formacao": "superior",
       "modalidade": "distancia",
       "materias": "geografia, filosofia",
       "created_at": 1588437644309
     },
     {
-      "id": "2",
+      "id": 2,
       "avatar_url": "http://avatar",
       "nome": "Cleide Santos",
       "nascimento": 393206400000,
       "formacao": "mestrado",
-      "modalidade": "distancia",
-      "materias": " espanhol",
+      "modalidade": "presencial",
+      "materias": " espanhol,francês",
       "created_at": 1588438680538
     },
     {
-      "id": 4,
+      "id": 3,
       "avatar_url": "http://avatar",
-      "nome": "Pedro",
-      "nascimento": -375494400000,
+      "nome": "Valerie Black",
+      "nascimento": 640396800000,
       "formacao": "doutorado",
-      "modalidade": "presencial",
-      "materias": "matemática, física",
-      "created_at": 1588720328226
+      "modalidade": "distancia",
+      "materias": "português,literatura",
+      "created_at": 1589291400781
     }
   ]
 }
