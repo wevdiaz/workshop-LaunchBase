@@ -4,6 +4,14 @@ const { encontrarIdade, encontrarData } = require("./utils");
 const intl = require("intl");
 
 
+// index
+exports.index = function(req, res){
+
+
+    return res.render("teachers/index", { teachers: dado.teachers });
+}
+
+
 // create 
 
 exports.post = function(req, res) {

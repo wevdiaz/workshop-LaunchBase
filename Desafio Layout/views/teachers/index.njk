@@ -4,46 +4,25 @@
 
     <div class="card">
 
-        <section class="avatar" style="background: url(https://source.unsplash.com/collection/4852103/400x500) no-repeat center center / cover"></section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Acompanhamento</th>                    
+                </tr>
+            </thead>
 
-        <section class="details">
+            <tbody>
 
-            <h3>Detalhes</h3>
-
-            <div class="item">
-                <div>Nome Completo</div>
-                <div>João Akira Souza</div>
-            </div>
-
-             <div class="item">
-                <div>Idade</div>
-                <div>32</div>
-            </div>
-
-             <div class="item">
-                <div>Formação</div>
-                <div>Doutorado</div>
-            </div>
-
-             <div class="item">
-                <div>Modo de Aula</div>
-                <div>Distância</div>
-            </div>
-
-            <div class="item">
-                <div>Acompanhamento</div>
-                <div>
-                    <span>Química</span>
-                    <span>Bioquímica</span>
-                </div>
-            </div>
-
-            <div class="item">
-                <div>Desde</div>
-                <div>01/04/2018</div>
-            </div>
-
-        </section>
+                {% for teacher in teachers %}
+                <tr>
+                    <td>{{teacher.nome}}</td>
+                    <td>{{teacher.materias}}</td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
 
     </div>
     
