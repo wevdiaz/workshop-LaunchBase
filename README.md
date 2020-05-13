@@ -65,6 +65,12 @@
 
 - [x] Criar um método DELETE. :pushpin:
 
+- [ ] Criar uma rota para Listagem.
+
+- [ ] Criar uma tabela para exibição dos professores cadastrados.
+
+- [ ] Estilização da Listagem.
+
 
 ***
 
