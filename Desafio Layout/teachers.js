@@ -7,8 +7,17 @@ const intl = require("intl");
 // index
 exports.index = function(req, res){
 
+    const teachers = dado.teachers.map(function(teacher){
+        const teacherMaterias = {
+            ...teacher,
+            materias: teacher.materias.split(",")
+        }
 
-    return res.render("teachers/index", { teachers: dado.teachers });
+        return teacherMaterias;
+    });
+
+
+    return res.render("teachers/index", { teachers });
 }
 
 

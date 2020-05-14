@@ -17,11 +17,17 @@
 
                 {% for teacher in teachers %}
                 <tr>
-                    <td>
+                    <td>                    
                         <span style="background-image: url({{teacher.avatar_url}})"></span> 
                         {{teacher.nome}}
                     </td>
-                    <td>{{teacher.materias}}</td>
+
+                    <td>
+                    {% for materia in teacher.materias %}
+                        <span>{{materia}}</span>
+                    {% endfor %}
+                    </td>
+
                     <td><a href="/teachers/{{teacher.id}}">ver</a></td>
                 </tr>
                 {% endfor %}
