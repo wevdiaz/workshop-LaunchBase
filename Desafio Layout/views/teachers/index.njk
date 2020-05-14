@@ -2,13 +2,14 @@
 
 {% block content %}
 
-    <div class="card">
+    <div class="card table-box">
 
-        <table>
+        <table width="100%">
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Acompanhamento</th>                    
+                    <th>Acompanhamento</th>
+                    <th>Ação</th>                    
                 </tr>
             </thead>
 
@@ -16,11 +17,15 @@
 
                 {% for teacher in teachers %}
                 <tr>
-                    <td>{{teacher.nome}}</td>
+                    <td>
+                        <span style="background-image: url({{teacher.avatar_url}})"></span> 
+                        {{teacher.nome}}
+                    </td>
                     <td>{{teacher.materias}}</td>
+                    <td><a href="/teachers/{{teacher.id}}">ver</a></td>
                 </tr>
                 {% endfor %}
-                
+
             </tbody>
         </table>
 
