@@ -5,7 +5,7 @@
 
  ### Atividades Javascript
 
- Nesta primeira pasta, temos pequenos programas desenvolvidos com *js*. Treinando conceios importantes como:
+ Nesta primeira pasta, temos pequenos programas desenvolvidos com *js*. Treinando conceitos importantes como:
 
  * variáveis
  * funções
@@ -35,42 +35,7 @@
  * Express
  * Nunjucks
 
- **Atualização do projeto**
-
-- [x] Desenvolver o header da página index.:pushpin:
-
-- [x] Animação nos links utilizando transition do CSS3.:pushpin:
-
-- [x] Container com imagem dinâmica.:pushpin:
-
-- [x] Atualização página dinâmico pelo servidor.:pushpin:
-
-- [x] Criar um formulário para cadastro de professores.:pushpin:
-
-- [x] Estilização do Formulário.:pushpin:
-
-- [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.:pushpin:
-
-- [x] Criar uma página com os dados do professor cadastrado, puxando pelo o ID. :pushpin:
-
-- [x] Ajuste dos dados puxados para a página de exibição. :pushpin:
-
-- [x] Criar um link para página de edição. :pushpin:
-
-- [x] Criar uma rota para edição de dados e verificação. :pushpin:
-
-- [x] Tratamento de dados para exibição de datas. :pushpin:
-
-- [x] Criar um método PUT. :pushpin:
-
-- [x] Criar um método DELETE. :pushpin:
-
-- [ ] Criar uma rota para Listagem.
-
-- [ ] Criar uma tabela para exibição dos professores cadastrados.
-
-- [ ] Estilização da Listagem.
-
+ ![imagem logo da rocketseat Launchbase](https://camo.githubusercontent.com/268b1344409fac98c4eeda520482b6910c4ddcba/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d6c61756e6368626173652f6c6f676f2e706e67)
 
 ***
 
