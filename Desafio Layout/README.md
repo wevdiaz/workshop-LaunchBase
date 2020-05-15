@@ -3,6 +3,23 @@
 Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat**. Neste projeto prático utilizamos diferentes tecnologias cada uma com seu importante papel no desenvolvimento da aplicação. :technologist:
 
 ***
+### Layout do Projeto:
+
+![página index](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Desafio%20Layout/img-Teachers/index_teachers.png)
+
+                                      page.index
+
+![página Edit](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Desafio%20Layout/img-Teachers/edit_teachers.jpg)
+
+                                      page.Edit
+
+![página Show](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Desafio%20Layout/img-Teachers/show_teachers.jpg)
+
+                                      page.Show
+
+
+
+***
 
 ### Tarefas Realizadas no projeto
 
