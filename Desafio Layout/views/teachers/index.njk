@@ -2,48 +2,38 @@
 
 {% block content %}
 
-    <div class="card">
+    <div class="card table-box">
 
-        <section class="avatar" style="background: url(https://source.unsplash.com/collection/4852103/400x500) no-repeat center center / cover"></section>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Acompanhamento</th>
+                    <th>Ação</th>                    
+                </tr>
+            </thead>
 
-        <section class="details">
+            <tbody>
 
-            <h3>Detalhes</h3>
+                {% for teacher in teachers %}
+                <tr>
+                    <td>                    
+                        <span style="background-image: url({{teacher.avatar_url}})"></span> 
+                        {{teacher.nome}}
+                    </td>
 
-            <div class="item">
-                <div>Nome Completo</div>
-                <div>João Akira Souza</div>
-            </div>
+                    <td>
+                    {% for materia in teacher.materias %}
+                        <span>{{materia}}</span>
+                    {% endfor %}
+                    </td>
 
-             <div class="item">
-                <div>Idade</div>
-                <div>32</div>
-            </div>
+                    <td><a href="/teachers/{{teacher.id}}">ver</a></td>
+                </tr>
+                {% endfor %}
 
-             <div class="item">
-                <div>Formação</div>
-                <div>Doutorado</div>
-            </div>
-
-             <div class="item">
-                <div>Modo de Aula</div>
-                <div>Distância</div>
-            </div>
-
-            <div class="item">
-                <div>Acompanhamento</div>
-                <div>
-                    <span>Química</span>
-                    <span>Bioquímica</span>
-                </div>
-            </div>
-
-            <div class="item">
-                <div>Desde</div>
-                <div>01/04/2018</div>
-            </div>
-
-        </section>
+            </tbody>
+        </table>
 
     </div>
     

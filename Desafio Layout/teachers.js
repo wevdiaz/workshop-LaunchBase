@@ -4,6 +4,23 @@ const { encontrarIdade, encontrarData } = require("./utils");
 const intl = require("intl");
 
 
+// index
+exports.index = function(req, res){
+
+    const teachers = dado.teachers.map(function(teacher){
+        const teacherMaterias = {
+            ...teacher,
+            materias: teacher.materias.split(",")
+        }
+
+        return teacherMaterias;
+    });
+
+
+    return res.render("teachers/index", { teachers });
+}
+
+
 // create 
 
 exports.post = function(req, res) {
