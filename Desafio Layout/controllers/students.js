@@ -7,17 +7,8 @@ const intl = require("intl");
 // index
 exports.index = function(req, res){
 
-    const teachers = dado.teachers.map(function(teacher){
-        const teacherMaterias = {
-            ...teacher,
-            materias: teacher.materias.split(",")
-        }
-
-        return teacherMaterias;
-    });
-
-
-    return res.render("teachers/index", { teachers });
+    
+    return res.render("students/index", { students: dado.students });
 }
 
 
@@ -37,11 +28,11 @@ exports.post = function(req, res) {
 
     req.body.nascimento = Date.parse(req.body.nascimento);
     req.body.created_at = Date.now();
-    req.body.id = Number(dado.teachers.length + 1);
+    req.body.id = Number(dado.students.length + 1);
 
     const { id, avatar_url, nome, nascimento, formacao, modalidade, materias, created_at } = req.body;
     
-    dado.teachers.push(
+    dado.students.push(
         {id,
         avatar_url,
         nome,
@@ -56,7 +47,7 @@ exports.post = function(req, res) {
     fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
         if (err) return res.send("write file error!");
 
-        return res.redirect("/teachers");
+        return res.redirect("/students");
     });
 
      //return res.send(req.body);
@@ -69,24 +60,24 @@ exports.show = function(req, res) {
     
     const { id } = req.params;
 
-    const foundTeacher = dado.teachers.find(function(teacher){
-        return teacher.id == id;
+    const foundStudent = dado.students.find(function(student){
+        return student.id == id;
     });
 
-    if (!foundTeacher) {
-        return res.send("Teacher not found!");
+    if (!foundStudent) {
+        return res.send("Student not found!");
     }
     
-    const teacher = {
-        ...foundTeacher,
-        idade: encontrarIdade(foundTeacher.nascimento),
-        formacao:escolhaDaFormacao(foundTeacher.formacao),
-        modalidade: escolherModalidade(foundTeacher.modalidade),
-        materias: foundTeacher.materias.split(","),
-        created_at: new intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
+    const student = {
+        ...foundStudent,
+        idade: encontrarIdade(foundStudent.nascimento),
+        formacao:escolhaDaFormacao(foundStudent.formacao),
+        modalidade: escolherModalidade(foundStudent.modalidade),
+        materias: foundStudent.materias.split(","),
+        created_at: new intl.DateTimeFormat("pt-BR").format(foundStudent.created_at)
     }
 
-    return res.render("teachers/show", { teacher });
+    return res.render("students/show", { student });
 }
 
 
@@ -96,22 +87,22 @@ exports.edit =  function(req, res){
 
     const { id } = req.params;
 
-    const foundTeacher = dado.teachers.find(function(teacher){
-        return teacher.id == id;
+    const foundStudent = dado.students.find(function(student){
+        return student.id == id;
     });
 
-    if (!foundTeacher) {
-        return res.send("Teacher not found!");
+    if (!foundStudent) {
+        return res.send("Student not found!");
     }
 
-    const teacher = {
-        ...foundTeacher,
-        nascimento: encontrarData(foundTeacher.nascimento)
+    const student = {
+        ...foundStudent,
+        nascimento: encontrarData(foundStudent.nascimento)
     }
 
     
 
-    return res.render("teachers/edit", { teacher });
+    return res.render("students/edit", { student });
 }
 
 
@@ -121,28 +112,28 @@ exports.put = function(req, res){
     const { id } = req.body;
     let index = 0;
 
-    const foundTeacher = dado.teachers.find(function(teacher, foundIndex){
-        if (id == teacher.id) {
+    const foundStudent = dado.students.find(function(student, foundIndex){
+        if (id == student.id) {
             index = foundIndex
             return true;
         }
     });
 
-    if (!foundTeacher) return res.send("Teacher not found!");
+    if (!foundStudent) return res.send("Student not found!");
 
-    const teacher = {
-        ...foundTeacher,
+    const student = {
+        ...foundStudent,
         ... req.body,
         nascimento: Date.parse(req.body.nascimento),
         id: Number(req.body.id)        
     }
 
-    dado.teachers[index] = teacher;
+    dado.students[index] = student;
 
     fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
         if (err)  return res.send("write error!");
 
-        return res.redirect(`/teachers/${id}`);
+        return res.redirect(`/students/${id}`);
     });
 }
 
@@ -150,16 +141,16 @@ exports.put = function(req, res){
 exports.delete = function(req, res) {
     const { id } = req.body;
 
-    const filteredTeachers = dado.teachers.filter(function(teacher){
-        return teacher.id != id
+    const filteredStudents = dado.students.filter(function(student){
+        return student.id != id
     });
 
-    dado.teachers = filteredTeachers;
+    dado.students = filteredStudents;
 
     fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
         if(err) return res.send("Write file error!");
 
-        return res.redirect("/teachers");
+        return res.redirect("/students");
 
     });
 
