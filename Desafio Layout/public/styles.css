@@ -263,7 +263,8 @@ tbody tr td:first-child span {
     border-radius: 50%;   
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-box > a {
     text-decoration: none;
     background-color: var(--color-primary);
     color: white;
@@ -271,6 +272,11 @@ tbody tr td:last-child a {
     text-transform: uppercase;
     border-radius: 4px;
     font-size: 12px;
+}
+
+.table-box > a {
+    margin-bottom: 16px;
+    display: inline-block;
 }
 
 tbody tr td:nth-child(2) span {
