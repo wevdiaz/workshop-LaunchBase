@@ -1,6 +1,7 @@
 const express = require("express");
 const routes = express.Router();
-const teachers = require("./teachers");
+const teachers = require("./controllers/teachers");
+const students = require("./controllers/students");
 
 
 routes.get("/", function(req, res){
@@ -9,9 +10,7 @@ routes.get("/", function(req, res){
 
 // teachers
 routes.get("/teachers", teachers.index );
-routes.get("/teachers/create", function(req, res){
-    return res.render("teachers/create");
-});
+routes.get("/teachers/create", teachers.create );
 routes.get("/teachers/:id", teachers.show);
 routes.get("/teachers/:id/edit", teachers.edit);
 routes.post("/teachers", teachers.post );
@@ -21,9 +20,7 @@ routes.delete("/teachers", teachers.delete);
 
 // students
 routes.get("/students", students.index );
-routes.get("/students/create", function(req, res){
-    return res.render("students/create");
-});
+routes.get("/students/create", students.create );
 routes.get("/students/:id", students.show);
 routes.get("/students/:id/edit", students.edit);
 routes.post("/students", students.post );

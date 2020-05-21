@@ -1,6 +1,6 @@
 const fs = require("fs");
-const dado = require("./dados.json");
-const { encontrarIdade, encontrarData } = require("./utils");
+const dado = require("../dados.json");
+const { encontrarIdade, encontrarData } = require("../utils");
 const intl = require("intl");
 
 
@@ -12,7 +12,12 @@ exports.index = function(req, res){
 }
 
 
-// create 
+// create
+exports.create = function(req, res){
+    return res.render("students/create");
+}
+
+// post 
 
 exports.post = function(req, res) {
     
