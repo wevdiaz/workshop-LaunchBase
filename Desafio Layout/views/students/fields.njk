@@ -4,18 +4,29 @@
                     <input type="url"
                            name="avatar_url" 
                            placeholder="http://"
-                           value= "{{teacher.avatar_url}}"
+                           value= "{{student.avatar_url}}"
                            >
                 </div>
             </div>
 
             <div class="item">
-                <div>Professor(a)</div>
+                <div>Estudante</div>
                 <div>
                     <input type="text"
                            name="nome"
                            placeholder="Nome Completo"
-                           value="{{teacher.nome}}"
+                           value="{{student.nome}}"
+                           >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Email</div>
+                <div>
+                    <input type="email"
+                           name="email"
+                           placeholder="@"
+                           value="{{student.email}}"
                            >
                 </div>
             </div>
@@ -25,75 +36,76 @@
                 <div>
                     <input type="date" 
                            name="nascimento"
-                           value="{{teacher.nascimento}}"
+                           value="{{student.nascimento}}"
                            >
                 </div>
             </div>
 
             <div class="item">
-                <div>Formação</div>
+                <div>Ano Escolar</div>
                 <div>
-                    <select name="formacao" placeholder="Selecione">
+                    <select name="anoEscolar">
 
                         <option 
-                            value="medio"
-                            {% if teacher.formacao == "medio" %}
+                            value="5"
+                            {% if student.anoEscolar == "5" %}
                                 selected
-                            {% endif %}>Ensino Médio Completo</option>
+                            {% endif %}>5º ano do Ensino Fundamental</option>
 
                         <option 
-                            value="superior"
-                            {% if teacher.formacao == "superior" %}
+                            value="6"
+                            {% if student.anoEscolar == "6" %}
                                 selected
-                            {% endif %}>Ensino Superior Completo</option>
+                            {% endif %}>6º ano do Ensino Fundamental</option>
                         
                         <option 
-                            value="mestrado"
-                            {% if teacher.formacao == "mestrado" %}
+                            value="7"
+                            {% if student.anoEscolar == "7" %}
                                 selected
-                            {% endif %}>Mestrado</option>
+                            {% endif %}>7º ano do Ensino Fundamental</option>
 
                         <option 
-                            value="doutorado"
-                            {% if teacher.formacao == "doutorado" %}
+                            value="8"
+                            {% if student.anoEscolar == "8" %}
                                 selected
-                            {% endif %}>Doutorado</option>
+                            {% endif %}>8º ano do Ensino Fundamental</option>
+
+                        <option 
+                            value="9"
+                            {% if student.anoEscolar == "9" %}
+                                selected
+                            {% endif %}>9º ano do Ensino Fundamental</option>
+
+                        <option 
+                            value="1"
+                            {% if student.anoEscolar == "1" %}
+                                selected
+                            {% endif %}>1º ano do Ensino Médio</option>
+
+                        <option 
+                            value="2"
+                            {% if student.anoEscolar == "2" %}
+                                selected
+                            {% endif %}>2º ano do Ensino Médio</option>
+
+                        <option 
+                            value="3"
+                            {% if student.anoEscolar == "3" %}
+                                selected
+                            {% endif %}>3º ano do Ensino Médio</option>
                     </select>
                 </div>
             </div>
 
-             <div class="item">
-                <div>Modo de Aula</div>
-                <div>
-                    <span>
-                        <input type="radio" 
-                               name="modalidade"
-                               value="presencial"
-                               {% if teacher.modalidade == "presencial" %}
-                                    checked
-                               {% endif %}>Presencial
-                    </span>
-
-                    <span>
-                        <input type="radio"
-                               name="modalidade"
-                               value="distancia"
-                               {% if teacher.modalidade == "distancia" %}
-                                    checked
-                               {% endif %}>À distância
-                    </span>
-                </div>
-            </div>
-
             <div class="item">
-                <div>Área de atuação</div>
+                <div>Carga Horária</div>
                 <div>
-                    <input type="text"
-                           name="materias" 
-                           placeholder="Separe por vírgula as materias de atuação"
-                           value="{{teacher.materias}}"
+                    <input type="number" 
+                           name="cargaHoraria"
+                           min="0"
+                           value="{{student.cargaHoraria}}"
                            >
                 </div>
-            </div> 
+            </div>       
 
             <button type="submit">Salvar</button> 
