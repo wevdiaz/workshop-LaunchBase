@@ -1,5 +1,15 @@
 {
-  "students": [],
+  "students": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "nome": "Valerie",
+      "email": "art_jowjow@gmail.com",
+      "nascimento": 959040000000,
+      "anoEscolar": "5",
+      "cargaHoraria": "60"
+    }
+  ],
   "teachers": [
     {
       "id": 1,

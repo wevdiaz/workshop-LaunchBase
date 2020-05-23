@@ -28,36 +28,45 @@ exports.post = function(req, res) {
         if (req.body[key] == "") {
             return res.send("Campo em branco, preencha!");
         }
+    }     
+
+    req.body.nascimento = Date.parse(req.body.nascimento);     
+
+    const {              
+            avatar_url, 
+            nome,
+            email, 
+            nascimento, 
+            anoEscolar, 
+            cargaHoraria
+         } = req.body;
+
+    let id = 1;     
+    const lastStudent = dado.students[dado.students.length - 1];
+
+    if (lastStudent) {
+        id = lastStudent.id + 1;
     }
-     
-
-    req.body.nascimento = Date.parse(req.body.nascimento);
-    req.body.created_at = Date.now();
-    req.body.id = Number(dado.students.length + 1);
-
-    const { id, avatar_url, nome, nascimento, formacao, modalidade, materias, created_at } = req.body;
     
     dado.students.push(
-        {id,
-        avatar_url,
-        nome,
-        nascimento,
-        formacao,
-        modalidade,
-        materias,
-        created_at}
+        {
+            id,
+            avatar_url,
+            nome,
+            email,
+            nascimento,
+            anoEscolar,
+            cargaHoraria,
+        }
     );
-
 
     fs.writeFile("dados.json", JSON.stringify(dado, null, 2), function(err){
         if (err) return res.send("write file error!");
 
         return res.redirect("/students");
     });
-
-     //return res.send(req.body);
+     
 }
-
 
 // show
 
@@ -77,8 +86,7 @@ exports.show = function(req, res) {
         ...foundStudent,
         idade: encontrarIdade(foundStudent.nascimento),
         formacao:escolhaDaFormacao(foundStudent.formacao),
-        modalidade: escolherModalidade(foundStudent.modalidade),
-        materias: foundStudent.materias.split(","),
+        modalidade: escolherModalidade(foundStudent.modalidade),        
         created_at: new intl.DateTimeFormat("pt-BR").format(foundStudent.created_at)
     }
 

@@ -4,7 +4,7 @@
 
     <div class="card">
 
-        <section class="avatar" style="background: url({{teacher.avatar_url}}) no-repeat center center / cover"></section>
+        <section class="avatar" style="background: url({{student.avatar_url}}) no-repeat center center / cover"></section>
 
         <section class="details">
 
@@ -12,41 +12,32 @@
 
             <div class="item">
                 <div>Nome Completo</div>
-                <div>{{teacher.nome}}</div>
-            </div>
-
-             <div class="item">
-                <div>Idade</div>
-                <div>{{teacher.idade}}</div>
-            </div>
-
-             <div class="item">
-                <div>Formação</div>
-                <div>{{teacher.formacao}}</div>
-            </div>
-
-             <div class="item">
-                <div>Modo de Aula</div>
-                <div>{{teacher.modalidade}}</div>
+                <div>{{student.nome}}</div>
             </div>
 
             <div class="item">
-                <div>Acompanhamento</div>
-                <div>
-
-                    {% for materia in teacher.materias %}
-                    <span>{{materia}}</span>
-                    {% endfor %}
-
-                </div>
+                <div>Email</div>
+                <div>{{student.email}}</div>
             </div>
 
-            <div class="item">
-                <div>Desde</div>
-                <div>{{teacher.created_at}}</div>
+             <div class="item">
+                <div>Aniversário</div>
+                <div>{{student.nascimento}}</div>
             </div>
 
-            <a href="/teachers/{{teacher.id}}/edit" class="edit">editar</a>
+             <div class="item">
+                <div>Ano Escolar</div>
+                <div>{{student.anoEscolar}}</div>
+            </div>
+
+             <div class="item">
+                <div>Carga Horária</div>
+                <div>{{student.cargaHoraria}}</div>
+            </div>
+
+            
+
+            <a href="/students/{{student.id}}/edit" class="edit">editar</a>
 
         </section>
 
