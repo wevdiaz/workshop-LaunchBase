@@ -26,7 +26,13 @@ module.exports = {
         const dia = `0${data.getUTCDate()}`.slice(-2);
 
 
-        return `${ano}-${mes}-${dia}`;
+        return {
+            dia,
+            mes,
+            ano,
+            iso:`${ano}-${mes}-${dia}`,
+            birthDay: `${dia}/${mes}`
+        };
         
     },
 
