@@ -28,5 +28,43 @@ module.exports = {
 
         return `${ano}-${mes}-${dia}`;
         
+    },
+
+    grade: function(escolha){
+
+        switch(escolha) {
+            
+            case "5":
+               return escolha = "5º ano do Ensino Fundamental";            
+    
+    
+            case "6":
+               return escolha = "6º ano do Ensino Fundamental";            
+    
+    
+            case "7":
+               return escolha = "7º ano do Ensino Fundamental";           
+    
+    
+            case "8":
+               return escolha = "8º ano do Ensino Fundamental";
+    
+    
+            case "9":
+                return escolha = "9º ano do Ensino Fundamental";
+    
+    
+            case "1":
+                return escolha = "1º ano do Ensino Médio"; 
+    
+            
+            case "2":
+                return escolha = "2º ano do Ensino Médio";
+        
+        
+            case "3":
+                return escolha = "3º ano do Ensino Médio";
+                
+        }
     }
 }

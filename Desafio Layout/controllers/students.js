@@ -1,6 +1,6 @@
 const fs = require("fs");
 const dado = require("../dados.json");
-const { encontrarIdade, encontrarData } = require("../utils");
+const { encontrarIdade, encontrarData, grade } = require("../utils");
 const intl = require("intl");
 
 
@@ -85,9 +85,8 @@ exports.show = function(req, res) {
     const student = {
         ...foundStudent,
         idade: encontrarIdade(foundStudent.nascimento),
-        formacao:escolhaDaFormacao(foundStudent.formacao),
-        modalidade: escolherModalidade(foundStudent.modalidade),        
-        created_at: new intl.DateTimeFormat("pt-BR").format(foundStudent.created_at)
+        anoEscolar:grade(foundStudent.anoEscolar)       
+        
     }
 
     return res.render("students/show", { student });
@@ -169,42 +168,3 @@ exports.delete = function(req, res) {
 
 }
 
-
-
-// ajuste form => Modalidade
-function escolherModalidade(opcao){
-    
-    if(opcao == "presencial"){
-        return "Presencial"
-    }
-    else {
-        return "A distânca"
-    }
-}
-
-
-// ajuste form => Formação
-function escolhaDaFormacao(escolha){
-
-    switch(escolha) {
-        
-        case "medio":
-           return escolha = "Ensino Médio Completo";
-            
-
-
-        case "superior":
-           return escolha = "Ensino Superior Completo";
-            
-
-
-        case "mestrado":
-           return escolha = "Mestrado";
-            
-
-
-        case "doutorado":
-           return escolha = "Doutorado";
-            
-    }
-}
