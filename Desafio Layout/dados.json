@@ -2,21 +2,21 @@
   "students": [
     {
       "id": 1,
-      "avatar_url": "https://images.unsplash.com/photo-1563306406-e66174fa3787?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "nome": "Valerie",
-      "email": "art_jowjow@gmail.com",
-      "nascimento": 959040000000,
-      "anoEscolar": "9",
-      "cargaHoraria": "60"
-    },
-    {
-      "id": 2,
       "avatar_url": "https://images.unsplash.com/photo-1505632958218-4f23394784a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
       "nome": "José Andrade",
       "email": "julioalvarez22@gmail.com",
       "nascimento": 1093219200000,
       "anoEscolar": "3",
       "cargaHoraria": "120"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1512413316925-fd4b93f31521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "nome": "Rebecca Lopez",
+      "email": "bettyboop@gmail.com",
+      "nascimento": 1163289600000,
+      "anoEscolar": "2",
+      "cargaHoraria": "90"
     }
   ],
   "teachers": [
