@@ -109,7 +109,7 @@ exports.edit =  function(req, res){
 
     const student = {
         ...foundStudent,
-        nascimento: encontrarData(foundStudent.nascimento)
+        nascimento: encontrarData(foundStudent.nascimento).iso
     }
 
     
