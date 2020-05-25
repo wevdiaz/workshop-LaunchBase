@@ -3,6 +3,7 @@
 :root {
     --color-primary: #4180E8;
     --color-labelDetails: #FF6D09;
+    --color-btn-delete: rgba(255,0,0,0.7);
 }
 
 * {
@@ -213,9 +214,20 @@ a.edit {
     letter-spacing: 0.1em;
 }
 
+a.edit:hover,
+button[type="submit"]:hover {
+    background-color: var(--color-primary);
+    filter: brightness(85%);
+}
+
 /* === deletar btn === */
 #form-deletar button {
-    background-color: rgba(255, 0, 0, 0.7);
+    background-color: var(--color-btn-delete);
+}
+
+#form-deletar button:hover {
+    background-color: var(--color-btn-delete);
+    filter: brightness(85%);    
 }
 
 
