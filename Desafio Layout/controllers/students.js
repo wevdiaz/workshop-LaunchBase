@@ -7,8 +7,15 @@ const intl = require("intl");
 // index
 exports.index = function(req, res){
 
+    const students = dado.students.map(function(student){
+        const studentGrade = {
+            ...student,
+            anoEscolar: grade(student.anoEscolar)
+        }
+        return studentGrade;
+    });
     
-    return res.render("students/index", { students: dado.students });
+    return res.render("students/index", { students });
 }
 
 
