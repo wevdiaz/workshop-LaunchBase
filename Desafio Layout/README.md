@@ -13,9 +13,9 @@ Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat*
 
                                       page.Edit
 
-![página Show](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Desafio%20Layout/img-Teachers/show_teachers.jpg)
+![página estudante](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Desafio%20Layout/img-Teachers/students_page.jpg)
 
-                                      page.Show
+                                      page.Student
 
 
 
