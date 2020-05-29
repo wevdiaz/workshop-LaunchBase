@@ -61,17 +61,17 @@ Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat*
 
 **Desenvolvimento da parte do estudante**
 
-- [ ] Estruturação da página.
+- [x] Estruturação da página.
 
-- [ ] Formulário do estudante.
+- [x] Formulário do estudante.
 
-- [ ] Organização dos dados.
+- [x] Organização dos dados.
 
-- [ ] Ajuste das funcionalidades.
+- [x] Ajuste das funcionalidades.
 
-- [ ] Estilização da página.
+- [x] Estilização da página.
 
-- [ ] Ajuste Finais e conclusão.
+- [x] Ajuste Finais e conclusão.
 
 ***
 
