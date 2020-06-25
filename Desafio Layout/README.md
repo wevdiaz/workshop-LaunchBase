@@ -75,4 +75,16 @@ Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat*
 
 ***
 
+### :hourglass: Fase 3
+
+**Desenvolvimento do banco de dados**
+
+* Utilizando PosgreSQL e Postbird 
+
+- [ ] Criação banco de dados
+
+- [ ] Integração do banco de dados.
+
+***
+
 Desafio sendo realizado com alegria:grinning: para atingir o objetivo. :dart:
