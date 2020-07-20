@@ -1,6 +1,5 @@
-
 module.exports = {
-     encontrarIdade: function (timestamp) {
+     encontrarIdade(timestamp) {
 
         const today = new Date();
     
@@ -17,7 +16,7 @@ module.exports = {
         return age;    
     },
 
-    encontrarData: function(timestamp){
+    encontrarData(timestamp){
 
         const data = new Date(timestamp);
 
@@ -36,7 +35,7 @@ module.exports = {
         
     },
 
-    grade: function(escolha){
+    grade(escolha){
 
         switch(escolha) {
             
