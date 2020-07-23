@@ -12,30 +12,30 @@
 
             <div class="item">
                 <div>Nome Completo</div>
-                <div>{{teacher.nome}}</div>
+                <div>{{teacher.name}}</div>
             </div>
 
              <div class="item">
                 <div>Idade</div>
-                <div>{{teacher.idade}}</div>
+                <div>{{teacher.age}} anos</div>
             </div>
 
              <div class="item">
                 <div>Formação</div>
-                <div>{{teacher.formacao}}</div>
+                <div>{{teacher.education_level}}</div>
             </div>
 
              <div class="item">
                 <div>Modo de Aula</div>
-                <div>{{teacher.modalidade}}</div>
+                <div>{{teacher.class_type}}</div>
             </div>
 
             <div class="item">
                 <div>Acompanhamento</div>
                 <div>
 
-                    {% for materia in teacher.materias %}
-                    <span>{{materia}}</span>
+                    {% for subject in teacher.subjects_taught %}
+                    <span>{{subject}}</span>
                     {% endfor %}
 
                 </div>

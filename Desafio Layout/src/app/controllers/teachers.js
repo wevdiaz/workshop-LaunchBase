@@ -25,7 +25,16 @@ module.exports = {
                 
     },
     show(req, res){
-        return
+        
+        teacher.find(req.params.id, function(teacher){
+            if (!teacher) return res.send("Teacher not found!");
+
+            teacher.age = encontrarIdade(teacher.birth_date);
+            teacher.subjects_taught = teacher.subjects_taught.split(",");
+            teacher.created_at = encontrarData(teacher.created_at).format;
+
+            return res.render("teachers/show", { teacher });
+        });
     },
     create(req, res){
         return res.render("teachers/create");
