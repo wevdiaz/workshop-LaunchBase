@@ -13,9 +13,9 @@
                 <div>Professor(a)</div>
                 <div>
                     <input type="text"
-                           name="nome"
+                           name="name"
                            placeholder="Nome Completo"
-                           value="{{teacher.nome}}"
+                           value="{{teacher.name}}"
                            >
                 </div>
             </div>
@@ -24,8 +24,8 @@
                 <div>Nascimento</div>
                 <div>
                     <input type="date" 
-                           name="nascimento"
-                           value="{{teacher.nascimento}}"
+                           name="birth_date"
+                           value="{{teacher.birth_date}}"
                            >
                 </div>
             </div>
@@ -33,29 +33,29 @@
             <div class="item">
                 <div>Formação</div>
                 <div>
-                    <select name="formacao" placeholder="Selecione">
+                    <select name="education_level" placeholder="Selecione">
 
                         <option 
                             value="medio"
-                            {% if teacher.formacao == "medio" %}
+                            {% if teacher.education_level == "medio" %}
                                 selected
                             {% endif %}>Ensino Médio Completo</option>
 
                         <option 
                             value="superior"
-                            {% if teacher.formacao == "superior" %}
+                            {% if teacher.education_level == "superior" %}
                                 selected
                             {% endif %}>Ensino Superior Completo</option>
                         
                         <option 
                             value="mestrado"
-                            {% if teacher.formacao == "mestrado" %}
+                            {% if teacher.education_level == "mestrado" %}
                                 selected
                             {% endif %}>Mestrado</option>
 
                         <option 
                             value="doutorado"
-                            {% if teacher.formacao == "doutorado" %}
+                            {% if teacher.education_level == "doutorado" %}
                                 selected
                             {% endif %}>Doutorado</option>
                     </select>
@@ -67,18 +67,18 @@
                 <div>
                     <span>
                         <input type="radio" 
-                               name="modalidade"
+                               name="class_type"
                                value="presencial"
-                               {% if teacher.modalidade == "presencial" %}
+                               {% if teacher.class_type == "presencial" %}
                                     checked
                                {% endif %}>Presencial
                     </span>
 
                     <span>
                         <input type="radio"
-                               name="modalidade"
+                               name="class_type"
                                value="distancia"
-                               {% if teacher.modalidade == "distancia" %}
+                               {% if teacher.class_type == "distancia" %}
                                     checked
                                {% endif %}>À distância
                     </span>
@@ -89,9 +89,9 @@
                 <div>Área de atuação</div>
                 <div>
                     <input type="text"
-                           name="materias" 
+                           name="subjects_taught" 
                            placeholder="Separe por vírgula as materias de atuação"
-                           value="{{teacher.materias}}"
+                           value="{{teacher.subjects_taught}}"
                            >
                 </div>
             </div> 

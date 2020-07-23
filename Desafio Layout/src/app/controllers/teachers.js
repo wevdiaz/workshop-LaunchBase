@@ -1,6 +1,8 @@
 const { encontrarIdade, encontrarData } = require("../../lib/utils");
 const intl = require("intl");
 
+
+
 module.exports = {
     index(req, res){
 
@@ -33,7 +35,30 @@ module.exports = {
             }
         }
 
-        return    
+        const query = `
+        INSERT INTO teachers (
+            avatar_url,
+            name,
+            birth_date,
+            education_level,
+            class_type,
+            subjects_taught,
+            created_at
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+        RETURNING id
+        `
+        
+        const values = [
+            req.body.avatar_url,
+            req.body.name,
+            encontrarData(req.body.birth_date).iso,
+            req.body.education_level,
+            req.body.class_type,
+            req.body.subjects_taught,
+            encontrarData(Date.now()).iso
+        ]
+
+        return
     
     },
     edit(req, res){
