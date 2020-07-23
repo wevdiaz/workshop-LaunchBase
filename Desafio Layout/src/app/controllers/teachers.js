@@ -2,28 +2,27 @@ const { encontrarIdade, encontrarData } = require("../../lib/utils");
 const intl = require("intl");
 
 const db = require("../../config/db");
+const teacher = require("../models/teacher");
 
 
 module.exports = {
     index(req, res){
 
-        // const teachers = dado.teachers.map(function(teacher){
-        //     const teacherMaterias = {
-        //         ...teacher,
-        //         materias: teacher.materias.split(",")
-        //     }
-    
-        //     return teacherMaterias;
-        // });
+        // 
+        teacher.all(function(teachers) {
 
-        db.query(`SELECT * FROM teachers`, function(err, results){
-            if (err) throw `Database Error! ${err}`;
+            const teachersIndex = teachers.map(function(teacher){
+                    const teachersubjects = {
+                        ...teacher,
+                        subjects_taught: teacher.subjects_taught.split(",")
+                    }
+            
+                    return teachersubjects;
+                });
 
-            return res.render("teachers/index", { teachers: results.rows });
-        });
-    
-    
-        
+            return res.render("teachers/index", { teachers: teachersIndex });
+        }); 
+                
     },
     show(req, res){
         return
