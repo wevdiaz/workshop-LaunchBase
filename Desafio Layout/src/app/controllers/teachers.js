@@ -1,6 +1,7 @@
 const { encontrarIdade, encontrarData } = require("../../lib/utils");
 const intl = require("intl");
 
+const db = require("../../config/db");
 
 
 module.exports = {
@@ -58,7 +59,11 @@ module.exports = {
             encontrarData(Date.now()).iso
         ]
 
-        return
+        db.query(query, values, function(err, results){
+            if (err) throw `Database Error! ${err}`;
+            
+            return res.redirect(`/teachers/${results.rows[0].id}`);
+        });
     
     },
     edit(req, res){
