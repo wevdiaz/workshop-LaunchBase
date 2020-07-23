@@ -56,7 +56,14 @@ module.exports = {
         
     },
     edit(req, res){
-        return
+        
+        teacher.find(req.params.id, function(teacher){
+            if (!teacher) res.send("Teacher not found!");
+
+            teacher.birth_date = encontrarData(teacher.birth_date).iso;
+
+            return res.render("teachers/edit", { teacher });
+        });
     },
     put(req, res){
 
@@ -69,7 +76,9 @@ module.exports = {
             }
         }
 
-        return   
+        teacher.update(req.body, function(){
+            return res.redirect(`/teachers/${req.body.id}`);
+        });   
     },
     delete(req, res){
         return
