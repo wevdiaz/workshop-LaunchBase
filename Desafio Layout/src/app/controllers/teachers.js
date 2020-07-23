@@ -15,9 +15,15 @@ module.exports = {
     
         //     return teacherMaterias;
         // });
+
+        db.query(`SELECT * FROM teachers`, function(err, results){
+            if (err) throw `Database Error! ${err}`;
+
+            return res.render("teachers/index", { teachers: results.rows });
+        });
     
     
-        return res.render("teachers/index");
+        
     },
     show(req, res){
         return
