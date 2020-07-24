@@ -72,5 +72,41 @@ module.exports = {
                 return escolha = "3º ano do Ensino Médio";
                 
         }
+    },
+
+    // ajuste form => Formação
+    escolhaDaFormacao(escolha){
+
+        switch(escolha) {
+            
+            case "medio":
+            return escolha = "Ensino Médio Completo";
+                
+
+
+            case "superior":
+            return escolha = "Ensino Superior Completo";
+                
+
+
+            case "mestrado":
+            return escolha = "Mestrado";
+                
+
+
+            case "doutorado":
+            return escolha = "Doutorado";
+                
+        }
+    },
+
+    escolherModalidade(opcao){
+    
+        if(opcao == "presencial"){
+            return "Presencial"
+        }
+        else {
+            return "A distânca"
+        }
     }
 }

@@ -1,4 +1,4 @@
-const { encontrarIdade, encontrarData } = require("../../lib/utils");
+const { encontrarIdade, encontrarData, escolhaDaFormacao, escolherModalidade } = require("../../lib/utils");
 const intl = require("intl");
 
 const db = require("../../config/db");
@@ -32,6 +32,8 @@ module.exports = {
             teacher.age = encontrarIdade(teacher.birth_date);
             teacher.subjects_taught = teacher.subjects_taught.split(",");
             teacher.created_at = encontrarData(teacher.created_at).format;
+            teacher.education_level = escolhaDaFormacao(teacher.education_level);
+            teacher.class_type = escolherModalidade(teacher.class_type);
 
             return res.render("teachers/show", { teacher });
         });
@@ -81,45 +83,9 @@ module.exports = {
         });   
     },
     delete(req, res){
-        return
-    },
-}
-
-
-// ajuste form => Modalidade
-function escolherModalidade(opcao){
-    
-    if(opcao == "presencial"){
-        return "Presencial"
-    }
-    else {
-        return "A distânca"
-    }
-}
-
-
-// ajuste form => Formação
-function escolhaDaFormacao(escolha){
-
-    switch(escolha) {
         
-        case "medio":
-           return escolha = "Ensino Médio Completo";
-            
-
-
-        case "superior":
-           return escolha = "Ensino Superior Completo";
-            
-
-
-        case "mestrado":
-           return escolha = "Mestrado";
-            
-
-
-        case "doutorado":
-           return escolha = "Doutorado";
-            
-    }
+        teacher.delete(req.body.id, function() {
+            return res.redirect("/teachers");
+        });
+    },
 }
