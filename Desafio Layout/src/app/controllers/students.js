@@ -1,23 +1,38 @@
-const { encontrarIdade, encontrarData } = require("../../lib/utils");
+const { encontrarIdade, encontrarData, escolhaDaFormacao, escolherModalidade } = require("../../lib/utils");
 const intl = require("intl");
+
+const db = require("../../config/db");
+const student = require("../models/student");
+
 
 module.exports = {
     index(req, res){
 
-        // const students = dado.students.map(function(student){
-        //     const studentMaterias = {
-        //         ...student,
-        //         materias: student.materias.split(",")
-        //     }
-    
-        //     return studentMaterias;
-        // });
-    
-    
-        return res.render("students/index");
+        // 
+        student.all(function(students) {
+
+            const studentsIndex = students.map(function(student){
+                    const studentsubjects = {
+                        ...student,
+                        subjects_taught: student.subjects_taught.split(",")
+                    }
+            
+                    return studentsubjects;
+                });
+
+            return res.render("students/index", { students: studentsIndex });
+        }); 
+                
     },
     show(req, res){
-        return
+        
+        student.find(req.params.id, function(student){
+            if (!student) return res.send("Student not found!");
+
+            student.birth_date = encontrarData(student.birth_date).birthDay;
+
+            return res.render("students/show", { student });
+        });
     },
     create(req, res){
         return res.render("students/create");
@@ -31,13 +46,22 @@ module.exports = {
             if (req.body[key] == "") {
                 return res.send("Campo em branco, preencha!");
             }
-        }
-
-        return    
-    
+        } 
+        
+        student.create(req.body, function(student){
+            return res.redirect(`/students/${student.id}`);
+        });
+        
     },
     edit(req, res){
-        return
+        
+        student.find(req.params.id, function(student){
+            if (!student) res.send("Student not found!");
+
+            student.birth_date = encontrarData(student.birth_date).iso;
+
+            return res.render("students/edit", { student });
+        });
     },
     put(req, res){
 
@@ -50,10 +74,15 @@ module.exports = {
             }
         }
 
-        return   
+        student.update(req.body, function(){
+            return res.redirect(`/students/${req.body.id}`);
+        });   
     },
     delete(req, res){
-        return
+        
+        student.delete(req.body.id, function() {
+            return res.redirect("/students");
+        });
     },
 }
 
