@@ -19,7 +19,7 @@ module.exports = {
             email,
             birth_date,
             grade,
-            course_load,            
+            course_load            
         ) VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING id
         `
@@ -59,7 +59,7 @@ module.exports = {
         UPDATE students SET
             avatar_url=($1),
             name=($2),
-            email=($3)
+            email=($3),
             birth_date=($4), 
             grade=($5),
             course_load=($6)           

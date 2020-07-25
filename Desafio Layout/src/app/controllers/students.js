@@ -1,4 +1,4 @@
-const { encontrarIdade, encontrarData, escolhaDaFormacao, escolherModalidade } = require("../../lib/utils");
+const { encontrarData, grade } = require("../../lib/utils");
 const intl = require("intl");
 
 const db = require("../../config/db");
@@ -30,6 +30,7 @@ module.exports = {
             if (!student) return res.send("Student not found!");
 
             student.birth_date = encontrarData(student.birth_date).birthDay;
+            student.grade = grade(student.grade);
 
             return res.render("students/show", { student });
         });
