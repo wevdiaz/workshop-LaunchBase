@@ -12,14 +12,13 @@ module.exports = {
         student.all(function(students) {
 
             const studentsIndex = students.map(function(student){
-                    const studentsubjects = {
-                        ...student,
-                        subjects_taught: student.subjects_taught.split(",")
-                    }
-            
-                    return studentsubjects;
-                });
-
+                const spreadStudent = {
+                    ...student,
+                    grade: grade(student.grade)
+                }
+                return spreadStudent;
+            });
+           
             return res.render("students/index", { students: studentsIndex });
         }); 
                 
