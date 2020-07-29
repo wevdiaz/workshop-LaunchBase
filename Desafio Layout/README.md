@@ -23,39 +23,39 @@ Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat*
 
 ### Tarefas Realizadas no projeto
 
-- [x] Desenvolver o header da página index.:pushpin:
+- [x] Desenvolver o header da página index.
 
-- [x] Animação nos links utilizando transition do CSS3.:pushpin:
+- [x] Animação nos links utilizando transition do CSS3.
 
-- [x] Container com imagem dinâmica.:pushpin:
+- [x] Container com imagem dinâmica.
 
-- [x] Atualização página dinâmico pelo servidor.:pushpin:
+- [x] Atualização página dinâmico pelo servidor.
 
-- [x] Criar um formulário para cadastro de professores.:pushpin:
+- [x] Criar um formulário para cadastro de professores.
 
-- [x] Estilização do Formulário.:pushpin:
+- [x] Estilização do Formulário.
 
-- [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.:pushpin:
+- [x] Criar uma rota para validação dos dados e armazenamento num arquivo JSON.
 
-- [x] Criar uma página com os dados do professor cadastrado, puxando pelo o ID. :pushpin:
+- [x] Criar uma página com os dados do professor cadastrado, puxando pelo o ID.
 
-- [x] Ajuste dos dados puxados para a página de exibição. :pushpin:
+- [x] Ajuste dos dados puxados para a página de exibição. 
 
-- [x] Criar um link para página de edição. :pushpin:
+- [x] Criar um link para página de edição. 
 
-- [x] Criar uma rota para edição de dados e verificação. :pushpin:
+- [x] Criar uma rota para edição de dados e verificação.
 
-- [x] Tratamento de dados para exibição de datas. :pushpin:
+- [x] Tratamento de dados para exibição de datas. 
 
-- [x] Criar um método PUT. :pushpin:
+- [x] Criar um método PUT. 
 
-- [x] Criar um método DELETE. :pushpin:
+- [x] Criar um método DELETE. 
 
-- [x] Criar uma rota para Listagem. :pushpin:
+- [x] Criar uma rota para Listagem. 
 
-- [x] Criar uma tabela para exibição dos professores cadastrados. :pushpin:
+- [x] Criar uma tabela para exibição dos professores cadastrados. 
 
-- [x] Estilização da Listagem. :pushpin:
+- [x] Estilização da Listagem. 
 
 ### :hourglass: Fase 2
 
@@ -81,9 +81,11 @@ Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat*
 
 * Utilizando PosgreSQL e Postbird 
 
-- [ ] Criação banco de dados
+- [x] Criação banco de dados
 
 - [ ] Integração do banco de dados.
+
+- [ ] Adicionando novas funcionalidades na aplicação.
 
 ***
 
