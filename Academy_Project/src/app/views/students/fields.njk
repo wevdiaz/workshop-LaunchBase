@@ -106,6 +106,15 @@
                            value="{{student.course_load}}"
                            >
                 </div>
-            </div>       
+            </div> 
+
+            <div class="item">
+                <div>Professor</div>
+                <div>
+                    <select name="teacher">
+                        <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %}selected{% endif %}>{{teacher.name}}}</option>
+                    </select>
+                </div>
+            </div>        
 
             <button type="submit">Salvar</button> 
