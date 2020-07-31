@@ -89,5 +89,13 @@ module.exports = {
 
             return callback();
         });
+    },
+
+    teachersSelectOptions(callback) {
+        db.query(`Selec name, id FROM teachers`, function(err, results){
+            if (err) throw `Database Error! ${err}`;
+
+            callback(results.rows);
+        });
     }
 }
