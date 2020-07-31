@@ -4,7 +4,20 @@
 
     <div class="card table-box">
 
-        <a href="/teachers/create">Novo +</a>
+        <div class="header_teachers">
+
+            <a href="/teachers/create">Novo +</a>
+
+            <form action="/teachers" method="GET">
+                <input type="text"
+                        name="filter" 
+                        placeholder="Filtrar Professor"
+                >
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+
 
         <table width="100%">
             <thead>
