@@ -46,9 +46,11 @@ module.exports = {
     find(id,callback){
 
         db.query(`
-            SELECT *
+            SELECT students.*, teachers.name AS teacher_name
             FROM students
-            WHERE id = $1`, [id], function(err, results){
+            LEFT JOIN teachers ON (students.teacher_id = teachers.id)
+            WHERE students.id = $1
+            `, [id], function(err, results){
                 if (err) throw `Database Error! ${err}`;
 
                 callback(results.rows[0]);
@@ -64,8 +66,9 @@ module.exports = {
             email=($3),
             birth_date=($4), 
             grade=($5),
-            course_load=($6)           
-        WHERE id = $7        
+            course_load=($6),
+            teacher_id=($7)           
+        WHERE id = $8        
         `
         
         const values = [
@@ -75,6 +78,7 @@ module.exports = {
             encontrarData(data.birth_date).iso,
             data.grade,
             data.course_load,
+            data.teacher,
             data.id
         ]
 
