@@ -57,12 +57,16 @@ module.exports = {
     },
     edit(req, res){
         
-        student.find(req.params.id, function(student){
-            if (!student) res.send("Student not found!");
+        student.find(req.params.id, function(Student){
+            if (!Student) res.send("Student not found!");
 
-            student.birth_date = encontrarData(student.birth_date).iso;
+            Student.birth_date = encontrarData(Student.birth_date).iso;
 
-            return res.render("students/edit", { student });
+            student.teachersSelectOptions(function(options){
+
+                return res.render("students/edit", { Student, teacherOptions: options });
+            });
+
         });
     },
     put(req, res){

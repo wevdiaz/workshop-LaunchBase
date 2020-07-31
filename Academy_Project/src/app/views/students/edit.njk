@@ -4,7 +4,7 @@
 
     <div class="card">
 
-        <section class="avatar" style="background: url({{student.avatar_url}}) no-repeat center center / cover"></section>
+        <section class="avatar" style="background: url({{Student.avatar_url}}) no-repeat center center / cover"></section>
 
         <section class="details">
 
@@ -17,13 +17,13 @@
 
                 {% include "students/fields.njk" %}
 
-                <input type="hidden" name="id" value="{{student.id}}">                      
+                <input type="hidden" name="id" value="{{Student.id}}">                      
         
 
             </form>
 
             <form id="form-deletar" action="/students?_method=DELETE" method="post">
-                <input type="hidden" name="id" value="{{student.id}}">
+                <input type="hidden" name="id" value="{{Student.id}}">
                 <button type="submit">Deletar</button>
             </form>
 

@@ -19,8 +19,9 @@ module.exports = {
             email,
             birth_date,
             grade,
-            course_load            
-        ) VALUES ($1, $2, $3, $4, $5, $6)
+            course_load,
+            teacher_id            
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7)
         RETURNING id
         `
         
@@ -30,7 +31,8 @@ module.exports = {
             data.email,
             encontrarData(data.birth_date).iso,
             data.grade,
-            data.course_load
+            data.course_load,
+            data.teacher
         ]
 
         db.query(query, values, function(err, results){

@@ -4,7 +4,7 @@
                     <input type="url"
                            name="avatar_url" 
                            placeholder="http://"
-                           value= "{{student.avatar_url}}"
+                           value= "{{Student.avatar_url}}"
                            >
                 </div>
             </div>
@@ -15,7 +15,7 @@
                     <input type="text"
                            name="name"
                            placeholder="Nome Completo"
-                           value="{{student.name}}"
+                           value="{{Student.name}}"
                            >
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     <input type="email"
                            name="email"
                            placeholder="@"
-                           value="{{student.email}}"
+                           value="{{Student.email}}"
                            >
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div>
                     <input type="date" 
                            name="birth_date"
-                           value="{{student.birth_date}}"
+                           value="{{Student.birth_date}}"
                            >
                 </div>
             </div>
@@ -48,49 +48,49 @@
 
                         <option 
                             value="5"
-                            {% if student.grade == "5" %}
+                            {% if Student.grade == "5" %}
                                 selected
                             {% endif %}>5º ano do Ensino Fundamental</option>
 
                         <option 
                             value="6"
-                            {% if student.grade == "6" %}
+                            {% if Student.grade == "6" %}
                                 selected
                             {% endif %}>6º ano do Ensino Fundamental</option>
                         
                         <option 
                             value="7"
-                            {% if student.grade == "7" %}
+                            {% if Student.grade == "7" %}
                                 selected
                             {% endif %}>7º ano do Ensino Fundamental</option>
 
                         <option 
                             value="8"
-                            {% if student.grade == "8" %}
+                            {% if Student.grade == "8" %}
                                 selected
                             {% endif %}>8º ano do Ensino Fundamental</option>
 
                         <option 
                             value="9"
-                            {% if student.grade == "9" %}
+                            {% if Student.grade == "9" %}
                                 selected
                             {% endif %}>9º ano do Ensino Fundamental</option>
 
                         <option 
                             value="1"
-                            {% if student.grade == "1" %}
+                            {% if Student.grade == "1" %}
                                 selected
                             {% endif %}>1º ano do Ensino Médio</option>
 
                         <option 
                             value="2"
-                            {% if student.grade == "2" %}
+                            {% if Student.grade == "2" %}
                                 selected
                             {% endif %}>2º ano do Ensino Médio</option>
 
                         <option 
                             value="3"
-                            {% if student.grade == "3" %}
+                            {% if Student.grade == "3" %}
                                 selected
                             {% endif %}>3º ano do Ensino Médio</option>
                     </select>
@@ -103,7 +103,7 @@
                     <input type="number" 
                            name="course_load"
                            min="0"
-                           value="{{student.course_load}}"
+                           value="{{Student.course_load}}"
                            >
                 </div>
             </div> 
@@ -114,7 +114,7 @@
                     <select name="teacher">
 
                     {% for teacher in teacherOptions %}
-                        <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %}selected{% endif %}>{{teacher.name}}}</option>
+                        <option value="{{teacher.id}}" {% if Student.teacher_id == teacher.id %}selected{% endif %}>{{teacher.name}}}</option>
                     {% endfor %}
 
                     </select>
