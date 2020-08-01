@@ -305,3 +305,35 @@ tbody tr td:nth-child(2) span {
     letter-spacing: 0.1em;
 }
 
+/* Filter */
+.table-box .header_teachers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-box .header_teachers a {    
+    height: 34.67px;
+    box-sizing: border-box;
+    width: 120px;
+    font-weight: normal;
+}
+
+.table-box .header_teachers form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-box .header_teachers form input {
+    border: 1px solid #eee;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.table-box .header_teachers button[type="submit"] {
+    margin-top: 0;
+}
+
