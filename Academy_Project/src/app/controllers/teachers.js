@@ -20,7 +20,7 @@ module.exports = {
                     return teachersubjects;
                 });
 
-             return res.render("teachers/index", { teachers: teachersIndex })
+             return res.render("teachers/index", { teachers: teachersIndex, filter })
             });            
         }
         else {
