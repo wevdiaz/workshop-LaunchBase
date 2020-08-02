@@ -7,11 +7,11 @@ const teacher = require("../models/teacher");
 
 module.exports = {
     index(req, res){
+        const { filter } = req.query;
 
-        // 
-        teacher.all(function(teachers) {
-
-            const teachersIndex = teachers.map(function(teacher){
+        if (filter) {
+            teacher.findBy(filter, function(teachers){
+                const teachersIndex = teachers.map(function(teacher){
                     const teachersubjects = {
                         ...teacher,
                         subjects_taught: teacher.subjects_taught.split(",")
@@ -20,11 +20,28 @@ module.exports = {
                     return teachersubjects;
                 });
 
-            return res.render("teachers/index", { teachers: teachersIndex });
-        }); 
+             return res.render("teachers/index", { teachers: teachersIndex })
+            });            
+        }
+        else {
+            
+            teacher.all(function(teachers) {
+    
+                const teachersIndex = teachers.map(function(teacher){
+                        const teachersubjects = {
+                            ...teacher,
+                            subjects_taught: teacher.subjects_taught.split(",")
+                        }
+                
+                        return teachersubjects;
+                    });
+    
+                return res.render("teachers/index", { teachers: teachersIndex });
+            }); 
+        } 
                 
     },
-    show(req, res){
+            show(req, res){
         
         teacher.find(req.params.id, function(teacher){
             if (!teacher) return res.send("Teacher not found!");
