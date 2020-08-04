@@ -5,7 +5,7 @@ Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat*
 ***
 ### Layout do Projeto:
 
-![página index](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/index_teachers.png)
+![página index](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/academy_project_teachers_index.png)
 
                                       page.index
 
@@ -13,7 +13,7 @@ Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat*
 
                                       page.Edit
 
-![página estudante](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/students_page.jpg)
+![página estudante](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/academy_project_students_index.png)
 
                                       page.Student
 
