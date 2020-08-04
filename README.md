@@ -26,7 +26,7 @@
 
  Neste [desafio](https://github.com/wevdiaz/workshop-LaunchBase/tree/master/Desafio%20Layout) está sendo desenvolvido uma aplicação web de aulas particulares.:man_technologist:
  
- ![Imagem do layout do projeto](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Desafio%20Layout/img-Teachers/index_teachers.png)
+ ![Imagem do layout do projeto](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/academy_project_teachers_index.png)
 
  **Tecnologias Utilizadas**:hammer_and_wrench:	
 
