@@ -5,6 +5,8 @@
  O launchbase da rocketseat :rocket: é uma imersão no mundo da programação através de um bootcamp com forte treinamento prático, aqui vou colocando em prática alguns desafios e ampliando o apreendizado para um nível a mais a cada passo :smile: . Com um excelente professor e profissional, que é o **Maik Brito**.:smile: 
 
  ***
+ 
+ ![imagem com símbolo js](https://avatars3.githubusercontent.com/u/19951984?s=400&u=4f9cbcbcb7d9ccec422415043a7515465dd09f34&v=4)
 
  ### Introdução ao Javascript
 
@@ -18,8 +20,7 @@
  * Loop
  * Condicionais
 
- ![imagem com símbolo js](https://avatars3.githubusercontent.com/u/19951984?s=400&u=4f9cbcbcb7d9ccec422415043a7515465dd09f34&v=4)
-
+ 
  *** 
 
  ### Academy Project 
@@ -30,17 +31,7 @@
 
  **Tecnologias Utilizadas**:hammer_and_wrench:	
 
- *Front-end*
- * HTML
- * CSS
- * Javascript
  
- *Back-end*
- * Nodejs
- * Express
- * Nunjucks
- * Banco de dados SQL
-
  
 ***
 
