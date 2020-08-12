@@ -29,8 +29,6 @@
  
  ![Imagem do layout do projeto](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/academy_project_teachers_index.png)
 
- **Tecnologias Utilizadas**:hammer_and_wrench:	
-
  
  
 ***
