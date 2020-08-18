@@ -7,38 +7,44 @@ const teacher = require("../models/teacher");
 
 module.exports = {
     index(req, res){
-        const { filter } = req.query;
+        let { filter, page, limit } = req.query;
 
-        if (filter) {
-            teacher.findBy(filter, function(teachers){
-                const teachersIndex = teachers.map(function(teacher){
-                    const teachersubjects = {
-                        ...teacher,
-                        subjects_taught: teacher.subjects_taught.split(",")
-                    }
-            
-                    return teachersubjects;
-                });
+        page = page || 1;
+        limit = limit || 4;
 
-             return res.render("teachers/index", { teachers: teachersIndex, filter })
-            });            
-        }
-        else {
-            
-            teacher.all(function(teachers) {
+        let offset = 0;
     
-                const teachersIndex = teachers.map(function(teacher){
-                        const teachersubjects = {
-                            ...teacher,
-                            subjects_taught: teacher.subjects_taught.split(",")
-                        }
+
+        // if (filter) {
+        //     teacher.findBy(filter, function(teachers){
+        //         const teachersIndex = teachers.map(function(teacher){
+        //             const teachersubjects = {
+        //                 ...teacher,
+        //                 subjects_taught: teacher.subjects_taught.split(",")
+        //             }
+            
+        //             return teachersubjects;
+        //         });
+
+        //      return res.render("teachers/index", { teachers: teachersIndex, filter })
+        //     });            
+        // }
+        // else {
+            
+        //     teacher.all(function(teachers) {
+    
+        //         const teachersIndex = teachers.map(function(teacher){
+        //                 const teachersubjects = {
+        //                     ...teacher,
+        //                     subjects_taught: teacher.subjects_taught.split(",")
+        //                 }
                 
-                        return teachersubjects;
-                    });
+        //                 return teachersubjects;
+        //             });
     
-                return res.render("teachers/index", { teachers: teachersIndex });
-            }); 
-        } 
+        //         return res.render("teachers/index", { teachers: teachersIndex });
+        //     }); 
+        // } 
                 
     },
     show(req, res){
