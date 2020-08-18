@@ -41,7 +41,7 @@ module.exports = {
         } 
                 
     },
-            show(req, res){
+    show(req, res){
         
         teacher.find(req.params.id, function(teacher){
             if (!teacher) return res.send("Teacher not found!");
