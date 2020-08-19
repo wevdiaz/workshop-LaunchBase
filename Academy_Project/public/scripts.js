@@ -17,13 +17,18 @@ let pages = [];
 
 for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
     
-    if (currentPage == 1  || currentPage == totalPages) {
-        pages.push(currentPage);
-    }
+    const firstAndLastPage = currentPage == 1  || currentPage == totalPages;
+    const secondAndPenultimatePage = currentPage == 2 || currentPage == (totalPages - 1);
 
-    if (currentPage == 2 || currentPage == (totalPages - 1)) {
-        pages.push(currentPage);
+    const beginAndEndPages = firstAndLastPage || secondAndPenultimatePage;
+
+    const pagesAfterSelectedPage = currentPage <= selectedPage + 2;
+    const pagesBeforeSelectedPage = currentPage >= selectedPage - 2;
+
+    if (beginAndEndPages || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
+        pages.push(currentPage)
     }
+    
 }
 
 console.log(pages);
