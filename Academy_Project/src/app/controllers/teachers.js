@@ -12,7 +12,17 @@ module.exports = {
         page = page || 1;
         limit = limit || 4;
 
-        let offset = 0;
+        let offset = limit  * (page - 1);
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(teachers){}
+        }
+
+        teacher.paginate(params);
     
 
         // if (filter) {
