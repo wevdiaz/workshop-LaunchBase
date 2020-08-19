@@ -10,10 +10,9 @@ for ( item of menuItems) {
 
 /* --- Pagination --- */
 let totalPages = 46;
-
-let selectedPage = 15;
-
+let selectedPage = 7;
 let pages = [];
+let oldPage;
 
 for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
     
@@ -26,12 +25,23 @@ for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
     const pagesBeforeSelectedPage = currentPage >= selectedPage - 2;
 
     if (beginAndEndPages || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
-        pages.push(currentPage)
-    }
+        
+        if (oldPage && currentPage - oldPage > 2) {
+            pages.push("...");
+        }
+
+        if (oldPage && currentPage - oldPage == 2) {
+            pages.push(oldPage + 1);
+        }
+
+        pages.push(currentPage);
+
+        oldPage = currentPage; 
+             
+    }   
     
 }
 
-console.log(pages);
 
 
 
