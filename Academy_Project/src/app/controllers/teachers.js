@@ -30,7 +30,13 @@ module.exports = {
                  return teachersubjects;
               });
 
-                return res.render("teachers/index", { teachers: teachersIndex, filter })
+              const pagination = {
+                  filter,
+                  total,
+                  page
+              }
+
+                return res.render("teachers/index", { teachers: teachersIndex })
             }
         }
 
