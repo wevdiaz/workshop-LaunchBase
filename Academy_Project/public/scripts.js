@@ -9,22 +9,23 @@ for ( item of menuItems) {
 
 
 /* --- Pagination --- */
-let totalPages = 46;
-let selectedPage = 7;
-let pages = [];
-let oldPage;
 
-for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
+function pagination(selectedPage, totalPages) {
     
-    const firstAndLastPage = currentPage == 1  || currentPage == totalPages;
-    const secondAndPenultimatePage = currentPage == 2 || currentPage == (totalPages - 1);
+    let pages = [];
+    let oldPage;
 
-    const beginAndEndPages = firstAndLastPage || secondAndPenultimatePage;
+    for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
+    
+        const firstAndLastPage = currentPage == 1  || currentPage == totalPages;
+        const secondAndPenultimatePage = currentPage == 2 || currentPage == (totalPages - 1);
 
-    const pagesAfterSelectedPage = currentPage <= selectedPage + 2;
-    const pagesBeforeSelectedPage = currentPage >= selectedPage - 2;
+        const beginAndEndPages = firstAndLastPage || secondAndPenultimatePage;
 
-    if (beginAndEndPages || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
+        const pagesAfterSelectedPage = currentPage <= selectedPage + 2;
+        const pagesBeforeSelectedPage = currentPage >= selectedPage - 2;
+
+        if (beginAndEndPages || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
         
         if (oldPage && currentPage - oldPage > 2) {
             pages.push("...");
@@ -38,8 +39,10 @@ for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
 
         oldPage = currentPage; 
              
-    }   
-    
+        }    
+    }
+
+    return pages;
 }
 
 
