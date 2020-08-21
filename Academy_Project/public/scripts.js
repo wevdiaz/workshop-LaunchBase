@@ -10,10 +10,11 @@ for ( item of menuItems) {
 
 /* --- Pagination --- */
 
-function pagination(selectedPage, totalPages) {
+function paginate(selectedPage, totalPages) {
     
-    let pages = [];
-    let oldPage;
+    const pagination = document.querySelector(".pagination");
+    const page = +pagination.dataset.page;
+    const total = +pagination.dataset.total;
 
     for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
     
