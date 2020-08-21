@@ -344,3 +344,14 @@ tbody tr td:nth-child(2) span {
     grid-template: 64px 1fr 16px / 1fr ;
 }
 
+.table-box .header_teachers {
+    margin: 0;
+    align-self: start;
+}
+
+.table-box .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
