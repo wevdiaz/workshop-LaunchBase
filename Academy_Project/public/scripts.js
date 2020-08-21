@@ -11,11 +11,10 @@ for ( item of menuItems) {
 /* --- Pagination --- */
 
 function paginate(selectedPage, totalPages) {
-    
-    const pagination = document.querySelector(".pagination");
-    const page = +pagination.dataset.page;
-    const total = +pagination.dataset.total;
 
+    let pages = [];
+    let oldPage;
+        
     for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
     
         const firstAndLastPage = currentPage == 1  || currentPage == totalPages;
@@ -45,6 +44,21 @@ function paginate(selectedPage, totalPages) {
 
     return pages;
 }
+
+const pagination = document.querySelector(".pagination");
+
+const page = +pagination.dataset.page;
+const total = +pagination.dataset.total;
+
+const pages = paginate(page, total);
+
+let elements = "";
+
+for (let page of pages) {
+    elements = elements + `<a href="?page=${page}">${page}</a>`
+}
+
+pagination.innerHTML = elements;
 
 
 
