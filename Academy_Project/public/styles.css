@@ -337,3 +337,10 @@ tbody tr td:nth-child(2) span {
     margin-top: 0;
 }
 
+
+/* --- Pagination --- */
+.table-box {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr ;
+}
+
