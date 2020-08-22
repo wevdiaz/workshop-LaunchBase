@@ -28,12 +28,12 @@ module.exports = {
                 }
         
                  return teachersubjects;
-              });
+              });              
 
               const pagination = {
                 total: Math.ceil(teachers[0].total / limit),
                 page
-              }
+              }           
 
                 return res.render("teachers/index", { teachers: teachersIndex, pagination, filter })
             }
