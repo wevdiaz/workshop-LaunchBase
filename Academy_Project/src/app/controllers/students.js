@@ -8,19 +8,38 @@ const student = require("../models/student");
 module.exports = {
     index(req, res){
 
-        // 
-        student.all(function(students) {
+        let { filter, page, limit } = req.query;
 
-            const studentsIndex = students.map(function(student){
-                const spreadStudent = {
-                    ...student,
-                    grade: grade(student.grade)
+        page = page || 1;
+        limit = limit || 4;
+
+        let offset = limit * (page - 1);
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(students) {
+
+                const studentsIndex = students.map(function(student){
+                    const spreadStudent = {
+                        ...student,
+                        grade: grade(student.grade)
+                    }
+                    return spreadStudent;
+                });
+
+                const pagination = {
+                    total: Math.ceil(students[0].total / limit),
+                    page
                 }
-                return spreadStudent;
-            });
-           
-            return res.render("students/index", { students: studentsIndex });
-        }); 
+
+                return res.render("students/index", { students: studentsIndex, pagination, filter });
+            }
+        }
+        
+        student.paginate(params);     
                 
     },
     show(req, res){
