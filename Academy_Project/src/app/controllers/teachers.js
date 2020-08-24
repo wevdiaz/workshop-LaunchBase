@@ -39,32 +39,7 @@ module.exports = {
             }
         }
 
-        teacher.paginate(params);
-    
-
-        // if (filter) {
-        //     teacher.findBy(filter, function(teachers){
-        //         
-
-        //      return res.render("teachers/index", { teachers: teachersIndex, filter })
-        //     });            
-        // }
-        // else {
-            
-        //     teacher.all(function(teachers) {
-    
-        //         const teachersIndex = teachers.map(function(teacher){
-        //                 const teachersubjects = {
-        //                     ...teacher,
-        //                     subjects_taught: teacher.subjects_taught.split(",")
-        //                 }
-                
-        //                 return teachersubjects;
-        //             });
-    
-        //         return res.render("teachers/index", { teachers: teachersIndex });
-        //     }); 
-        // } 
+        teacher.paginate(params);    
                 
     },
     show(req, res){
