@@ -7,7 +7,7 @@ Nesta aplicação podemos fazer cadastro de professores e alunos para controle d
 ***
 ### Layout do Projeto:
 
-![página index](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/academy_project_teachers_index.png)
+![página index](https://raw.githubusercontent.com/wevdiaz/workshop-LaunchBase/master/Academy_Project/img-Teachers/academy_teachers_index.png)
 
                                       page.index
 
