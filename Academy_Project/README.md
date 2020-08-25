@@ -35,6 +35,8 @@ Nesta aplicação podemos fazer cadastro de professores e alunos para controle d
 Para verificação da aplicação é necessário instalação dos programas abaixo:
 
 *  **Node js** e **NPM**
+1. *npm install* - Instalar as dependências do projeto.
+1. *npm start* - Para rodar a aplicação.
 
 ***
 
