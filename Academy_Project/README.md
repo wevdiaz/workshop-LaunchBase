@@ -38,4 +38,10 @@ Para verificação da aplicação é necessário instalação dos programas abai
 
 ***
 
+#### Licença :scroll:
+ 
+ Este projeto está com a licença MIT. Veja o arquivo de [LICENSE](https://github.com/wevdiaz/NLW-Ecoleta/blob/master/LICENSE) para mais destalhe.
+ 
+ ***
+
 Desafio sendo realizado com alegria:grinning: para atingir o objetivo. :dart:
