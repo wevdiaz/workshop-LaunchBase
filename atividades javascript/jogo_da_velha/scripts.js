@@ -55,7 +55,7 @@ function beginSpaces() {
 }
 
 
-function checkWinner() {
+async function checkWinner() {
 
     let a1 = document.getElementById("a1").getAttribute("jogada");
     let a2 = document.getElementById("a2").getAttribute("jogada");
@@ -84,6 +84,12 @@ function checkWinner() {
     if (vencedor != "") {
         gameOver = true;
 
+        await sleep(50);
+
         alert(`O vencedor foi o '${vencedor}'`);
     }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
