@@ -1,11 +1,15 @@
-const player1 = "X";
-const player2 = "O";
+const player1 = prompt("Nome do Jogador 1") || "X";
+const player2 = prompt("Nome do Jogador 2") || "0";
 
 let playTime = player1;
 let gameOver = false;
 
+const fieldsTabuleiro = document.querySelectorAll(".space");
+const containerRestart = document.getElementById("restart");
+
 updateMostrador();
 beginSpaces();
+
 
 function updateMostrador() {
 
@@ -47,6 +51,7 @@ function beginSpaces() {
                 }
                 updateMostrador();
                 checkWinner();
+                checkFields();
             }
 
         });
@@ -85,9 +90,40 @@ async function checkWinner() {
         gameOver = true;
 
         await sleep(50);
-
         alert(`O vencedor foi o '${vencedor}'`);
+
+        restartGame();
     }
+}
+
+function checkFields() {
+    let contador = 0;
+
+    for (let i = 0; i < fieldsTabuleiro.length; i++) {
+
+        if (fieldsTabuleiro[i].innerHTML != "") {
+            contador = contador + 1;
+        }
+    }
+
+    if (contador == 9 && gameOver == false) {
+        
+        const newButton = document.createElement("button");
+        newButton.innerText = "Começar novo jogo";
+
+        const mgs = document.createElement("p");
+        mgs.innerHTML = "Deu velha! <br> Vamos tentar um novo jogo &#x1F600;";
+
+        newButton.addEventListener("click", restartGame );
+
+        containerRestart.appendChild(mgs);
+        containerRestart.appendChild(newButton);
+    }
+}
+
+function restartGame() {
+    
+    document.location.reload();
 }
 
 function sleep(ms) {
