@@ -26,3 +26,24 @@
 
     box-sizing: border-box;
 }
+
+#restart {
+    width: 240px;
+    height: 300px;
+    padding: 24px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+#restart button {
+    font-size: 18px;
+}
+
+#restart p {
+    font-size: 18px;
+    color: blue;
+}
