@@ -1,8 +1,9 @@
-const player1 = prompt("Nome do Jogador 1") || "X";
-const player2 = prompt("Nome do Jogador 2") || "0";
+const player1 = prompt("Nome do Jogador 1") || "Jogador 1";
+const player2 = prompt("Nome do Jogador 2") || "Jogador 2";
 
 let playTime = player1;
 let gameOver = false;
+let namePlayer = document.getElementById("namePlayer");
 
 const fieldsTabuleiro = document.querySelectorAll(".space");
 const containerRestart = document.getElementById("restart");
@@ -19,10 +20,12 @@ function updateMostrador() {
 
         let player = document.querySelector("div#mostrador img");
         player.setAttribute("src", "imagens/jdv-x.png");
+        namePlayer.innerHTML = playTime;
     }
     else {
         let player = document.querySelector("div#mostrador img");
         player.setAttribute("src", "imagens/jdv-o.png");
+        namePlayer.innerHTML = playTime;
     }
 }
 
@@ -112,7 +115,7 @@ function checkFields() {
         newButton.innerText = "Começar novo jogo";
 
         const mgs = document.createElement("p");
-        mgs.innerHTML = "Deu velha! <br> Vamos tentar um novo jogo &#x1F600;";
+        mgs.innerHTML = "Deu velha! <br> Vamos tentar de novo &#x1F600;";
 
         newButton.addEventListener("click", restartGame );
 
