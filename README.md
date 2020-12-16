@@ -19,6 +19,7 @@
  * operadores
  * Loop
  * Condicionais
+ * jogo da velha -> Usando HTML, CSS e javascript
 
  
  *** 
