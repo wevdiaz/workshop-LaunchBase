@@ -1,5 +1,29 @@
 # Academy Project
 
+<p align="center">
+  
+  <a>
+      <img src="https://img.shields.io/github/repo-size/wevdiaz/workshop-LaunchBase?color=orange" alt="GitHub repo size">
+  <a/>
+  
+  <a>
+      <img src="https://img.shields.io/github/license/wevdiaz/workshop-LaunchBase?color=orange" alt="GitHub license">
+  <a/>
+  
+  <a>
+      <img src="https://img.shields.io/github/languages/count/wevdiaz/workshop-LaunchBase?color=orange" alt="GitHub language count">
+  <a/>
+  
+  <a>
+      <img src="https://img.shields.io/github/last-commit/wevdiaz/workshop-LaunchBase?color=orange" alt="GitHub last commit">
+  <a/>
+  
+  <a>
+      <img alt="Diazz" src="https://img.shields.io/badge/made%20by-Diazz-Academy_Project?color=orange">      
+  <a/>
+  
+</p>
+
 Aqui podemos colocar em prática o aprendizado do curso da :rocket:**Rocketseat**. Neste projeto está sendo utilizado diferentes tecnologias cada uma com seu importante papel no desenvolvimento da aplicação. :technologist:
 
 Nesta aplicação podemos fazer cadastro de professores e alunos para controle de aulas. Tem todo um cuidado no desenvolvimento de suas rotas, banco de dados e designer da aplicação. 
